@@ -6,4 +6,4 @@ COPY . /app
 WORKDIR /app
 
 # Install hex package manager
-# By using --force, we don’t 
+# By using --force, we don’t need to type “Y” to confirm the 
