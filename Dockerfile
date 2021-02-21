@@ -5,4 +5,5 @@ RUN mkdir /app
 COPY . /app
 WORKDIR /app
 
-# Install hex packag
+# Install hex package manager
+# By using --force, we don’t 
