@@ -7,4 +7,5 @@ WORKDIR /app
 
 # Install hex package manager
 # By using --force, we don’t need to type “Y” to confirm the installation
-RUN apt-get upda
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninter
