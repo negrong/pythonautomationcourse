@@ -9,4 +9,5 @@ WORKDIR /app
 # By using --force, we don’t need to type “Y” to confirm the installation
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y locales gcc g++ make \
-    && 
+    && rm -rf /var/cache/apt \
+   
