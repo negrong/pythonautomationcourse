@@ -10,4 +10,5 @@ WORKDIR /app
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y locales gcc g++ make \
     && rm -rf /var/cache/apt \
-   
+    && mix local.hex --force \
+    
