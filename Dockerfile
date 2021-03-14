@@ -12,4 +12,4 @@ RUN apt-get update \
     && rm -rf /var/cache/apt \
     && mix local.hex --force \
     && mix local.rebar --force \
-    && s
+    && sed -i -e 's/# en_US.UTF-8 UTF-8/en
