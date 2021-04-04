@@ -14,4 +14,6 @@ RUN apt-get update \
     && mix local.rebar --force \
     && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
     && locale-gen \
-    && mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --f
+    && mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
+
+RUN mix deps.get && (cd dep
