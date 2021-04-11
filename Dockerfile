@@ -17,3 +17,5 @@ RUN apt-get update \
     && mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
 
 RUN mix deps.get && (cd deps/bcrypt_elixir && make clean && make) && mix deps.compile
+
+CMD mix ecto.create && mix ecto.m
