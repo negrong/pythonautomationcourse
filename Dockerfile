@@ -16,4 +16,4 @@ RUN apt-get update \
     && locale-gen \
     && mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez --force
 
-RUN mix deps.get && (cd dep
+RUN mix deps.get && (cd deps/bcrypt_elixir && make cle
