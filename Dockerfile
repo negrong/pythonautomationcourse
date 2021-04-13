@@ -18,4 +18,4 @@ RUN apt-get update \
 
 RUN mix deps.get && (cd deps/bcrypt_elixir && make clean && make) && mix deps.compile
 
-CMD mix ecto.create && mix ecto.migrate && mix run priv/repo/seeds.exs && mix ph
+CMD mix ecto.create && mix ecto.migrate && mix run priv/repo/seeds.exs && mix phx.server
