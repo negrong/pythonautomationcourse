@@ -72,3 +72,43 @@ Response
 ```json
 {
   "id": "5eb60246-ede8-4bb4-8c05-9cdb56f170bd",
+  "name": "John Due"
+}
+```
+**POST** `localhost:4000/api/v1/signin`
+
+Parameters Example:
+```json
+{
+  "email": "john_due@gmail.com", 
+  "password": "password123"
+}
+```
+Response (example)
+```json
+{
+  "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJTbWFydEJhbmsiLCJleHAiOjE1NzU2MDAzNTQsImlhdCI6MTU3MzE4MTE1NCwiaXNzIjoiU21hcnRCYW5rIiwianRpIjoiM2UzZDZhNWQtZDc1My00YmI2LWIzYmQtNDc4ODU4ZDI4NmYzIiwibmJmIjoxNTczMTgxMTUzLCJzdWIiOiI1YWExYjRmZi02MmNmLTQ5YzQtYTk3My0xOTNhZWQ0MDZhY2YiLCJ0eXAiOiJhY2Nlc3MifQ.71O-COZ1f0u4fOB55Bqfq_0zs978vUg9Hmd8RuIPdWc7W3Zc8tqS_-1R_qXytpFP3lYSmgsW79izYueNrlE9Dg"
+}
+```
+### Deposit (Authenticate)
+
+**POST** `localhost:4000/api/v1/deposit`
+
+Parameters Example:
+```json
+{
+  "amount": 10000
+}
+```
+Response (example)
+```json
+{
+    "account_id": "e0954408-b3c1-4772-a4ed-60bd1521d504",
+    "amount": "$100.00",
+    "date": "2019-11-08T02:46:00",
+    "transaction_id": "8fe995cf-0c27-440c-b65f-d6ecc8d63254",
+    "type": "deposit"
+}
+```
+
+**POST** `localhost:4000/api/v1/withdraw`
