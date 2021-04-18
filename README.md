@@ -112,3 +112,33 @@ Response (example)
 ```
 
 **POST** `localhost:4000/api/v1/withdraw`
+
+Parameters Example:
+```json
+{
+  "amount": 500
+}
+```
+Response (example)
+```json
+{
+    "account_id": "e0954408-b3c1-4772-a4ed-60bd1521d504",
+    "amount": "$-5.00",
+    "date": "2019-11-08T02:50:36",
+    "transaction_id": "299320a0-6c1c-4219-8961-02e5b19f1912",
+    "type": "withdraw"
+}
+```
+
+**POST** `localhost:4000/api/v1/transfer`
+
+Parameters Example:
+```json
+{
+  "account_id": "4eb5752b-08c7-4cee-be14-8bdfa48d1212",
+  "amount": 9000
+}
+```
+Response (example)
+Success
+```json
