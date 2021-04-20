@@ -173,3 +173,38 @@ Success
 }
 ```
 2. Account not found
+```json
+{
+  "errors": {
+    "detail": {
+      "message": "Account not found"
+    }
+  }
+}
+```
+2. Transfer from another account
+```json
+{
+  "errors": {
+    "detail": {
+      "message": "You just make transfers from your account"
+    }
+  }
+}
+```
+
+**GET** `localhost:4000/api/v1/wallet/:account_id`
+
+Parameters Example:
+
+Without json paramenter
+
+Response (example)
+```json
+{
+  "account_id": "5eb60246-ede8-4bb4-8c05-9cdb56f170bd",
+  "wallet": "$500.00"
+}
+```
+Errors
+```json
