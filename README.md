@@ -142,3 +142,34 @@ Parameters Example:
 Response (example)
 Success
 ```json
+{
+    "transactions": [
+        {
+            "account_id": "e0954408-b3c1-4772-a4ed-60bd1521d504",
+            "amount": "$-90.00",
+            "date": "2019-11-08T02:55:22",
+            "transaction_id": "51c94348-83a2-4bf3-bfb0-180d19095778",
+            "type": "transfer"
+        },
+        {
+            "account_id": "55fb5cf6-206f-4e4e-8fee-c08b2c2f5b41",
+            "amount": "$90.00",
+            "date": "2019-11-08T02:55:22",
+            "transaction_id": "3e59f5fa-08ec-4c50-bbdf-05038f7258c6",
+            "type": "transfer"
+        }
+    ]
+}
+```
+### Errors
+1. Insuficient Funds
+```json
+{
+  "errors": {
+    "detail": {
+      "message": "Transfer not allowed: Insuficient funds"
+    }
+  }
+}
+```
+2. Account not found
