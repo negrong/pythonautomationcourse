@@ -208,3 +208,35 @@ Response (example)
 ```
 Errors
 ```json
+{
+  "errors": {
+    "detail": {
+      "message": "Account not found"
+    }
+  }
+}
+```
+**GET** `localhost:4000/api/v1/report`
+
+Parameters Example:
+
+Without json paramenter
+
+Response (example)
+```json
+{
+    "month": {
+        "08": [
+            {
+                "account_id": "e0954408-b3c1-4772-a4ed-60bd1521d504",
+                "amount": "$1,000.00",
+                "date": "2019-11-08T02:10:10",
+                "transaction_id": "fe72f9b7-b4f7-41a8-8ba0-94e2b2f097da"
+            },
+            {
+                "account_id": "e0954408-b3c1-4772-a4ed-60bd1521d504",
+                "amount": "$100.00",
+                "date": "2019-11-08T02:46:00",
+                "transaction_id": "8fe995cf-0c27-440c-b65f-d6ecc8d63254"
+            }
+        ]
