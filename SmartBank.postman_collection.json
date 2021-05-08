@@ -2,4 +2,8 @@
 	"info": {
 		"_postman_id": "b116ea80-2157-4edf-900c-267b43bbe032",
 		"name": "SmartBank",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collecti
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"nam
