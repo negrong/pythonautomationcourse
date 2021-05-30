@@ -13,4 +13,4 @@
 					"script": {
 						"id": "8ebacd6b-b5f1-4519-8272-a2e0a7491e9d",
 						"exec": [
-							"pm.globals.set(\"ba
+							"pm.globals.set(\"bank.account_id\", pm.response.json().id
