@@ -15,4 +15,7 @@
 						"exec": [
 							"pm.globals.set(\"bank.account_id\", pm.response.json().id);"
 						],
-						"type": "tex
+						"type": "text/javascript"
+					}
+				}
+			]
