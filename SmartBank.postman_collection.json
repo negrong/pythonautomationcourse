@@ -20,4 +20,6 @@
 				}
 			],
 			"request": {
+				"method": "POST",
+				"header": [
 			
