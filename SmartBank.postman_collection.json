@@ -35,4 +35,7 @@
 				},
 				"url": {
 					"raw": "localhost:4000/api/v1/signup",
-					"host": 
+					"host": [
+						"localhost"
+					],
+					"po
