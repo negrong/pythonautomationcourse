@@ -57,4 +57,6 @@
 						"id": "c6cc6ce7-fb1b-4946-af9d-e26df2ebe597",
 						"exec": [
 							"var data = pm.response.json();",
-							"pm.environme
+							"pm.environment.set(\"token\", data.token);"
+						],
+					
