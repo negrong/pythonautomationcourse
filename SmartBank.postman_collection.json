@@ -59,4 +59,4 @@
 							"var data = pm.response.json();",
 							"pm.environment.set(\"token\", data.token);"
 						],
-					
+						"type": "text/javascript"
