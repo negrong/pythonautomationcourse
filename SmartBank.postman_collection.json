@@ -64,4 +64,6 @@
 				}
 			],
 			"request": {
+				"method": "POST",
+				"header": [
 		
