@@ -60,3 +60,8 @@
 							"pm.environment.set(\"token\", data.token);"
 						],
 						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+		
