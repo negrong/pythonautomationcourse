@@ -66,4 +66,5 @@
 			"request": {
 				"method": "POST",
 				"header": [
-		
+					{
+						"key": "Content-Typ
