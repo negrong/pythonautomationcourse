@@ -67,4 +67,5 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Content-Typ
+						"key": "Content-Type",
+						"name": "Content-Type
