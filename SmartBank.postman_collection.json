@@ -72,4 +72,7 @@
 						"value": "application/json",
 						"type": "text"
 					}
+				],
+				"body": {
+					"mode": "raw",
 	
