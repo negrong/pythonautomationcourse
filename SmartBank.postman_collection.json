@@ -75,4 +75,5 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"email\": \"drsantos20@gmail.com\",\n\t\"
+					"raw": "{\n\t\"email\": \"drsantos20@gmail.com\",\n\t\"password\": \"123456\"\n}"
+				},
