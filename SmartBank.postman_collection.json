@@ -83,4 +83,7 @@
 						"localhost"
 					],
 					"port": "4000",
-					"path
+					"path": [
+						"api",
+						"v1",
+					
