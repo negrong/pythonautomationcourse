@@ -99,4 +99,7 @@
 					"listen": "test",
 					"script": {
 						"id": "68a26a67-1853-47d9-958f-b1721a2d0925",
-						"exec": 
+						"exec": [
+							""
+						],
+						"type": 
