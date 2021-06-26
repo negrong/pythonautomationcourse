@@ -107,4 +107,6 @@
 				}
 			],
 			"request": {
-				
+				"auth": {
+					"type": "bearer",
+					
