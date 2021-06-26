@@ -102,4 +102,6 @@
 						"exec": [
 							""
 						],
-						"type": 
+						"type": "text/javascript"
+					}
+				}
