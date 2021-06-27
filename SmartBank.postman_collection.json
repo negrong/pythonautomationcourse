@@ -109,4 +109,6 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					
+					"bearer": [
+						{
+							"key": "tok
