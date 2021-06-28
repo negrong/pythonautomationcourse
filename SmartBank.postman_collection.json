@@ -111,4 +111,6 @@
 					"type": "bearer",
 					"bearer": [
 						{
-							"key": "tok
+							"key": "token",
+							"value": "{{token}}",
+	
