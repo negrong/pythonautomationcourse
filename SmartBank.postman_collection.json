@@ -139,4 +139,6 @@
 				"url": {
 					"raw": "localhost:4000/api/v1/deposit",
 					"host": [
-						
+						"localhost"
+					],
+					"port": "4000",
