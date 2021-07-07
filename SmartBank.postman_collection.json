@@ -160,4 +160,6 @@
 		},
 		{
 			"name": "Withdraw",
-			"request": 
+			"request": {
+				"auth": {
+					"type"
