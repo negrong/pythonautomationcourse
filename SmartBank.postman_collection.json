@@ -162,4 +162,6 @@
 			"name": "Withdraw",
 			"request": {
 				"auth": {
-					"type"
+					"type": "bearer",
+					"bearer": [
+					
