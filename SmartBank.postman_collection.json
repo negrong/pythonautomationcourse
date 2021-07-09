@@ -166,4 +166,5 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": 
+							"value": "{{token}}",
+							"type": "stri
