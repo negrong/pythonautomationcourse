@@ -176,4 +176,6 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/j
+						"value": "application/json",
+						"type": "text"
+			
