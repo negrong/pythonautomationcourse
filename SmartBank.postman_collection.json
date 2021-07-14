@@ -185,4 +185,6 @@
 					"raw": "{\n\t\"amount\": 500\n}"
 				},
 				"url": {
-					"raw": "localhost:4000/api/v1/wi
+					"raw": "localhost:4000/api/v1/withdraw",
+					"host": [
+						"
