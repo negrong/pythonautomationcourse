@@ -206,4 +206,5 @@
 					"type": "bearer",
 					"bearer": [
 						{
-							"key": "
+							"key": "token",
+							"value": "{{token}}"
