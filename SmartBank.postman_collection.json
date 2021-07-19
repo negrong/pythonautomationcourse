@@ -210,4 +210,6 @@
 							"value": "{{token}}",
 							"type": "string"
 						}
-				
+					]
+				},
+				"method": "PO
