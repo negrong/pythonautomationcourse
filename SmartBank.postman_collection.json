@@ -217,4 +217,5 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "app
+						"value": "application/json",
+						"type": "text"
