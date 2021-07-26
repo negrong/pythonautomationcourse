@@ -245,4 +245,6 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bear
+					"bearer": [
+						{
+							"key"
