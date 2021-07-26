@@ -244,4 +244,5 @@
 			"name": "Report",
 			"request": {
 				"auth": {
-	
+					"type": "bearer",
+					"bear
