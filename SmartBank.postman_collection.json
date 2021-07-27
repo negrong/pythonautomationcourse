@@ -248,4 +248,5 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{tok
+							"value": "{{token}}",
+							"type": "strin
