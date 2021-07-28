@@ -249,4 +249,8 @@
 						{
 							"key": "token",
 							"value": "{{token}}",
-							"type": "strin
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
