@@ -271,4 +271,6 @@
 			"response": []
 		},
 		{
-			"name": "List Acc
+			"name": "List Accounts",
+			"request": {
+				"auth": {
