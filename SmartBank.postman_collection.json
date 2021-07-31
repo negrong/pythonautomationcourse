@@ -274,3 +274,5 @@
 			"name": "List Accounts",
 			"request": {
 				"auth": {
+					"type": "bearer",
+					"bearer"
