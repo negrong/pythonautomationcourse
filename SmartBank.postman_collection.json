@@ -278,3 +278,5 @@
 					"bearer": [
 						{
 							"key": "token",
+							"value": "{{token}}",
+			
