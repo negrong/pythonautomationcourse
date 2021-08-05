@@ -286,4 +286,6 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:4000/api/v1/
+					"raw": "localhost:4000/api/v1/accounts",
+					"host": [
+					
