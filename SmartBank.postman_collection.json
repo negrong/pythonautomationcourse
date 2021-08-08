@@ -302,4 +302,6 @@
 		},
 		{
 			"name": "Wallet",
-			"requ
+			"request": {
+				"auth": {
+					"type":
