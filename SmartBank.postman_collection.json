@@ -307,4 +307,5 @@
 					"type": "bearer",
 					"bearer": [
 						{
-							"
+							"key": "token",
+						
