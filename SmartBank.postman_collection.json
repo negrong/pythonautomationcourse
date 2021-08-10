@@ -309,4 +309,8 @@
 						{
 							"key": "token",
 							"value": "{{token}}",
-							"type": "s
+							"type": "string"
+						}
+					]
+				},
+				"meth
