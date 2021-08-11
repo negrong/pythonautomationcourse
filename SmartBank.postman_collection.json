@@ -315,4 +315,5 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": 
+				"url": {
+					"raw": "localhost:4000/api/v1/wallet/7c
