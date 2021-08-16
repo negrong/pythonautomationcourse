@@ -344,4 +344,6 @@
 			}
 		},
 		{
-			"listen": "
+			"listen": "test",
+			"script": {
+		
