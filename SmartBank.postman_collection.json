@@ -347,4 +347,8 @@
 			"listen": "test",
 			"script": {
 				"id": "eb05e638-a675-409f-9794-e639e957574e",
-				"type": "text/
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+	
