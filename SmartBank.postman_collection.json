@@ -354,4 +354,5 @@
 			}
 		}
 	],
-	"protocolProfileBehavio
+	"protocolProfileBehavior": {}
+}
