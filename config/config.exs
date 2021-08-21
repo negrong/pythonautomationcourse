@@ -27,3 +27,12 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 config :SmartBank, SmartBank.Authentication.Guardian,
+  issuer: "SmartBank",
+  secret_key: "ogCuOEUekKT7dqepUExQtvm3Fs9UIhR6g0506h1Jmjb0tvxY7yaQuZpD72j5iHVX"
+
+config :money,
+  default_currency: :USD
+
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config "#{Mix.env()}.exs"
