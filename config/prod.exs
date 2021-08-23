@@ -4,4 +4,4 @@ use Mix.Config
 # to something meaningful, Phoenix uses this information
 # when generating URLs.
 #
-# Note we also in
+# Note we also include the path to a cache ma
