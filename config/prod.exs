@@ -5,4 +5,4 @@ use Mix.Config
 # when generating URLs.
 #
 # Note we also include the path to a cache manifest
-# containing the digested 
+# containing the digested version of static files. This
