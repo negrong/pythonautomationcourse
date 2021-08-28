@@ -11,4 +11,5 @@ use Mix.Config
 # before starting your production server.
 config :SmartBank, SmartBankWeb.Endpoint,
   url: [scheme: "https", host: "smart-bank", port: 443],
-  force_ssl: [rewrite_on: [:x_forward
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  server: true,
