@@ -17,4 +17,6 @@ config :SmartBank, SmartBankWeb.Endpoint,
   render_errors: [accepts: ~w(json)]
 
 # Do not print debug messages in production
-config :logger, lev
+config :logger, level: :info
+
+# ## SSL Suppo
