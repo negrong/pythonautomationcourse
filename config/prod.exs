@@ -15,3 +15,5 @@ config :SmartBank, SmartBankWeb.Endpoint,
   server: true,
   cache_static_manifest: "priv/static/cache_manifest.json",
   render_errors: [accepts: ~w(json)]
+
+# Do not print debug messages 
