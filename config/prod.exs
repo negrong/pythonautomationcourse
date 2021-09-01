@@ -19,4 +19,6 @@ config :SmartBank, SmartBankWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
-# ## SSL Suppo
+# ## SSL Support
+#
+# To get SSL working, you wil
