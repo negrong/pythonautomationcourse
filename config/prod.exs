@@ -21,4 +21,5 @@ config :logger, level: :info
 
 # ## SSL Support
 #
-# To get SSL working, you wil
+# To get SSL working, you will need to add the `https` key
+# to the pre
