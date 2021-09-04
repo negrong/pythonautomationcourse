@@ -24,4 +24,4 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :Sma
+#     config :SmartBank, SmartBankWeb.Endpoint,
