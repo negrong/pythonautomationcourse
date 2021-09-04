@@ -26,4 +26,6 @@ config :logger, level: :info
 #
 #     config :SmartBank, SmartBankWeb.Endpoint,
 #       ...
-#       url: [host: "example.c
+#       url: [host: "example.com", port: 443],
+#       https: [
+#   
