@@ -25,3 +25,5 @@ config :logger, level: :info
 # to the previous section and set your `:url` port to 443:
 #
 #     config :SmartBank, SmartBankWeb.Endpoint,
+#       ...
+#       url: [host: "example.c
