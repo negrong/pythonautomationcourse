@@ -29,4 +29,5 @@ config :logger, level: :info
 #       url: [host: "example.com", port: 443],
 #       https: [
 #         :inet6,
-#         port: 4
+#         port: 443,
+#         cipher_suite
