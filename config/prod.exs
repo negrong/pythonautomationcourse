@@ -31,4 +31,4 @@ config :logger, level: :info
 #         :inet6,
 #         port: 443,
 #         cipher_suite: :strong,
-#         keyfile: Sys
+#         keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
