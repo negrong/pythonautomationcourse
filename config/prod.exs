@@ -32,3 +32,4 @@ config :logger, level: :info
 #         port: 443,
 #         cipher_suite: :strong,
 #         keyfile: System.get_env("SOME_APP_SSL_KEY_PATH"),
+#         certfile: System.get_env("SOME_
