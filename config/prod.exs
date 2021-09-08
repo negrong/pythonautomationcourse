@@ -35,4 +35,4 @@ config :logger, level: :info
 #         certfile: System.get_env("SOME_APP_SSL_CERT_PATH")
 #       ]
 #
-# T
+# The `cipher_suite` is set to `
