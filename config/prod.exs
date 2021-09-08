@@ -35,4 +35,5 @@ config :logger, level: :info
 #         certfile: System.get_env("SOME_APP_SSL_CERT_PATH")
 #       ]
 #
-# The `cipher_suite` is set to `
+# The `cipher_suite` is set to `:strong` to support only the
+# lates
