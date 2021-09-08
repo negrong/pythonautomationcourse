@@ -36,4 +36,4 @@ config :logger, level: :info
 #       ]
 #
 # The `cipher_suite` is set to `:strong` to support only the
-# lates
+# latest and more secure SSL ciphers. This means old 
