@@ -37,4 +37,5 @@ config :logger, level: :info
 #
 # The `cipher_suite` is set to `:strong` to support only the
 # latest and more secure SSL ciphers. This means old browsers
-# and clients may no
+# and clients may not be supported. You can set it to
+# `
