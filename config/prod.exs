@@ -41,4 +41,4 @@ config :logger, level: :info
 # `:compatible` for wider support.
 #
 # `:keyfile` and `:certfile` expect an absolute path to the key
-# and cert i
+# and cert in disk or a relative path inside pr
