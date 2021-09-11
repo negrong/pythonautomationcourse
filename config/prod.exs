@@ -40,4 +40,5 @@ config :logger, level: :info
 # and clients may not be supported. You can set it to
 # `:compatible` for wider support.
 #
-# `:keyfile` and `:certfile` expect an a
+# `:keyfile` and `:certfile` expect an absolute path to the key
+# and cert i
