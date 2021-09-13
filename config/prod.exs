@@ -42,4 +42,4 @@ config :logger, level: :info
 #
 # `:keyfile` and `:certfile` expect an absolute path to the key
 # and cert in disk or a relative path inside priv, for example
-# "priv/ssl/ser
+# "priv/ssl/server.key". For all supported SSL configurat
