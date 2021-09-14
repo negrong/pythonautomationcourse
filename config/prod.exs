@@ -43,4 +43,6 @@ config :logger, level: :info
 # `:keyfile` and `:certfile` expect an absolute path to the key
 # and cert in disk or a relative path inside priv, for example
 # "priv/ssl/server.key". For all supported SSL configuration
-# options, see https://hexdocs.pm/plug/Plug.SSL.html#co
+# options, see https://hexdocs.pm/plug/Plug.SSL.html#configure/1
+#
+# We also recommend
