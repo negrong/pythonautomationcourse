@@ -45,4 +45,5 @@ config :logger, level: :info
 # "priv/ssl/server.key". For all supported SSL configuration
 # options, see https://hexdocs.pm/plug/Plug.SSL.html#configure/1
 #
-# We also recommend setting `force_ssl` in
+# We also recommend setting `force_ssl` in your endpoint, ensuring
+# 
