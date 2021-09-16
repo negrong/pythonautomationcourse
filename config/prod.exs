@@ -46,4 +46,4 @@ config :logger, level: :info
 # options, see https://hexdocs.pm/plug/Plug.SSL.html#configure/1
 #
 # We also recommend setting `force_ssl` in your endpoint, ensuring
-# 
+# no data is ever sent via htt
