@@ -48,4 +48,4 @@ config :logger, level: :info
 # We also recommend setting `force_ssl` in your endpoint, ensuring
 # no data is ever sent via http, always redirecting to https:
 #
-#  
+#     config :SmartBank, SmartB
