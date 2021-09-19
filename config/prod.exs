@@ -49,4 +49,6 @@ config :logger, level: :info
 # no data is ever sent via http, always redirecting to https:
 #
 #     config :SmartBank, SmartBankWeb.Endpoint,
-#       force_ssl:
+#       force_ssl: [hsts: true]
+#
+# Check `Plug.SSL` fo
