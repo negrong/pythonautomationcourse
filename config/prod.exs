@@ -51,4 +51,6 @@ config :logger, level: :info
 #     config :SmartBank, SmartBankWeb.Endpoint,
 #       force_ssl: [hsts: true]
 #
-# Check `Plug.SSL` for all available options in `forc
+# Check `Plug.SSL` for all available options in `force_ssl`.
+
+# ## Using releases (Elix
