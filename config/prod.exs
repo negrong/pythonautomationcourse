@@ -53,4 +53,6 @@ config :logger, level: :info
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
 
-# ## Using releases (Elix
+# ## Using releases (Elixir v1.9+)
+#
+# If you are doing OTP 
