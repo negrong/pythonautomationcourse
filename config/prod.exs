@@ -58,4 +58,6 @@ config :logger, level: :info
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :SmartBank, SmartBankWeb.Endpoint, server: tru
+#     config :SmartBank, SmartBankWeb.Endpoint, server: true
+#
+# Then you can assembl
