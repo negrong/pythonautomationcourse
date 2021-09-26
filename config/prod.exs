@@ -60,4 +60,4 @@ config :logger, level: :info
 #
 #     config :SmartBank, SmartBankWeb.Endpoint, server: true
 #
-# Then you can assembl
+# Then you can assemble a release by calling `mix release`
