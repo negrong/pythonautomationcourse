@@ -63,4 +63,4 @@ config :logger, level: :info
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
 
-# Finally import th
+# Finally import the config/prod.secret.exs wh
