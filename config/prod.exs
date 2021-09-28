@@ -64,4 +64,4 @@ config :logger, level: :info
 # See `mix help release` for more information.
 
 # Finally import the config/prod.secret.exs which loads secrets
-# and configurati
+# and configuration from environment variables.
