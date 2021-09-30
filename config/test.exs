@@ -1,3 +1,4 @@
 use Mix.Config
 
-# Config
+# Configure your database
+config :SmartBank
