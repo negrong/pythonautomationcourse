@@ -1,4 +1,6 @@
 use Mix.Config
 
 # Configure your database
-config :SmartBank
+config :SmartBank, SmartBank.Repo,
+  username: 'dev',
+ 
