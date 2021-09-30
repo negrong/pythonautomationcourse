@@ -4,4 +4,5 @@ use Mix.Config
 config :SmartBank, SmartBank.Repo,
   username: 'dev',
   password: 'dev123',
-  d
+  database: 'smart_bank_test',
+  ho
