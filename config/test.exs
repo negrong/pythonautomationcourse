@@ -6,4 +6,6 @@ config :SmartBank, SmartBank.Repo,
   password: 'dev123',
   database: 'smart_bank_test',
   hostname: 'localhost',
-  pool:
+  pool: Ecto.Adapters.SQL.Sandbox
+
+# We don't ru
