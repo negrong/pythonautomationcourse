@@ -8,4 +8,4 @@ config :SmartBank, SmartBank.Repo,
   hostname: 'localhost',
   pool: Ecto.Adapters.SQL.Sandbox
 
-# We don't ru
+# We don't run a server during test. If one is re
