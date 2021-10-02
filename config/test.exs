@@ -12,4 +12,6 @@ config :SmartBank, SmartBank.Repo,
 # you can enable the server option below.
 config :SmartBank, SmartBankWeb.Endpoint,
   http: [port: 4002],
-  server: fa
+  server: false
+
+# Print only warnings a
