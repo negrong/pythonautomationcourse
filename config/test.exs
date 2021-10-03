@@ -14,4 +14,5 @@ config :SmartBank, SmartBankWeb.Endpoint,
   http: [port: 4002],
   server: false
 
-# Print only warnings a
+# Print only warnings and errors during test
+c
