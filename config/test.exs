@@ -15,4 +15,4 @@ config :SmartBank, SmartBankWeb.Endpoint,
   server: false
 
 # Print only warnings and errors during test
-c
+config :logger, level: :warn
