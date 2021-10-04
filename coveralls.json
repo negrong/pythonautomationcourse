@@ -1,3 +1,5 @@
 {
     "custom_stop_words": [
-      "#NOCOVE
+      "#NOCOVER"
+    ],
+    "coverage_opti
