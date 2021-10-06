@@ -6,4 +6,6 @@
       "minimum_coverage": 90,
       "treat_no_relevant_lines_as_covered": true
     },
-    "skip_
+    "skip_files": [
+      "mix/",
+      "test/",
