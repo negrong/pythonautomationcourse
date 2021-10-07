@@ -9,3 +9,5 @@
     "skip_files": [
       "mix/",
       "test/",
+      "lib/SmartBank_web.ex",
+      "
