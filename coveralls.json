@@ -10,4 +10,5 @@
       "mix/",
       "test/",
       "lib/SmartBank_web.ex",
-      "
+      "lib/SmartBank/application.ex",
+      "li
