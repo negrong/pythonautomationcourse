@@ -13,4 +13,6 @@
       "lib/SmartBank/application.ex",
       "lib/SmartBank_web/endpoint.ex",
       "lib/SmartBank_web/gettext.ex",
-      "lib/SmartBank_web/views/error_hel
+      "lib/SmartBank_web/views/error_helpers.ex"
+    ]
+  }
