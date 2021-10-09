@@ -12,4 +12,5 @@
       "lib/SmartBank_web.ex",
       "lib/SmartBank/application.ex",
       "lib/SmartBank_web/endpoint.ex",
+      "lib/SmartBank_web/gettext.ex",
      
