@@ -1,1 +1,4 @@
-# Version 
+# Version of docker-compose
+version: '3'
+
+# 
