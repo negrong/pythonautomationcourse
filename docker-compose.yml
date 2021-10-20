@@ -4,4 +4,5 @@ version: '3'
 # Containers we are going to run
 services:
   # Our Phoenix container
-  phoe
+  phoenix:
+    # The build parameters 
