@@ -2,4 +2,6 @@
 version: '3'
 
 # Containers we are going to run
-servi
+services:
+  # Our Phoenix container
+  phoe
