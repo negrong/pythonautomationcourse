@@ -8,3 +8,5 @@ services:
     # The build parameters for this container.
     build:
       # Here we define that it should build from the current directory
+      context: .
+    envir
