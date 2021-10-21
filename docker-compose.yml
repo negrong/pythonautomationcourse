@@ -7,4 +7,4 @@ services:
   phoenix:
     # The build parameters for this container.
     build:
-      # Here we define that it 
+      # Here we define that it should build from the current directory
