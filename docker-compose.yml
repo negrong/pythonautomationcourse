@@ -5,4 +5,5 @@ version: '3'
 services:
   # Our Phoenix container
   phoenix:
-    # The build parameters 
+    # The build parameters for this container.
+    build:
