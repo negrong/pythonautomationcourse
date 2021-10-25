@@ -11,4 +11,5 @@ services:
       context: .
     environment:
       # Variables to connect to our Postgres server
-      
+      PGUSER: dev
+      PGPASSWORD: dev123
