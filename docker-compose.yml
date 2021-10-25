@@ -10,4 +10,5 @@ services:
       # Here we define that it should build from the current directory
       context: .
     environment:
-      # Variables to 
+      # Variables to connect to our Postgres server
+      
