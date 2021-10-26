@@ -13,3 +13,5 @@ services:
       # Variables to connect to our Postgres server
       PGUSER: dev
       PGPASSWORD: dev123
+      PGDATABASE: smart_bank_dev
+    
