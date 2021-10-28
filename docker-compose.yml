@@ -18,4 +18,4 @@ services:
       # Hostname of our Postgres container
       PGHOST: db
     ports:
-      # Mapping the port to make the Phoenix app 
+      # Mapping the port to make the Phoenix app accessible outside of the containe
