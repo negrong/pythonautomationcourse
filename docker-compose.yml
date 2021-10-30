@@ -23,4 +23,4 @@ services:
     volumes:
       - ../../:/opt/app
     depends_on:
-      # The db container needs to be st
+      # The db container needs to be started before we start this containe
