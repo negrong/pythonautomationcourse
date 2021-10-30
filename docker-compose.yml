@@ -23,4 +23,7 @@ services:
     volumes:
       - ../../:/opt/app
     depends_on:
-      # The db container needs to be started before we start this containe
+      # The db container needs to be started before we start this container
+      - db
+  db:
+    # We use the predefin
