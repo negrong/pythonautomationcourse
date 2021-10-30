@@ -26,4 +26,5 @@ services:
       # The db container needs to be started before we start this container
       - db
   db:
-    # We use the predefin
+    # We use the predefined Postgres image
+    image: p
