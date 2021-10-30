@@ -22,4 +22,5 @@ services:
       - "4000:4000"
     volumes:
       - ../../:/opt/app
-    depe
+    depends_on:
+      # The db container needs to be st
