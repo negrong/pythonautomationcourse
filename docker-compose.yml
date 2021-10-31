@@ -29,4 +29,4 @@ services:
     # We use the predefined Postgres image
     image: postgres:9.6
     environment:
-  
+      # Set user/password for 
