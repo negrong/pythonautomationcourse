@@ -27,4 +27,6 @@ services:
       - db
   db:
     # We use the predefined Postgres image
-    image: p
+    image: postgres:9.6
+    environment:
+  
