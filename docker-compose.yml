@@ -31,4 +31,4 @@ services:
     environment:
       # Set user/password for Postgres
       POSTGRES_USER: dev
- 
+      POSTGRES_PASSWORD: dev1
