@@ -33,4 +33,7 @@ services:
       POSTGRES_USER: dev
       POSTGRES_PASSWORD: dev123
       # Set a path where Postgres should store the data
-      PGDATA: /var/lib/postgresql/data/p
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    volumes:
+    
