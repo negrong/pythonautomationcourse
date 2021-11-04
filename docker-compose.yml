@@ -36,4 +36,4 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     restart: always
     volumes:
-    
+      - pgdata:/var/lib/postgresql/d
