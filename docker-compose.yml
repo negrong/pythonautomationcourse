@@ -32,4 +32,5 @@ services:
       # Set user/password for Postgres
       POSTGRES_USER: dev
       POSTGRES_PASSWORD: dev123
-      # Set a path where Postgres s
+      # Set a path where Postgres should store the data
+      PGDATA:
