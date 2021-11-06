@@ -42,4 +42,5 @@ services:
     image: postgres:9.6
     ports:
       - "5432:5432"
-    en
+    environment:
+      POSTGRES_DB: 
