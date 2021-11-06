@@ -40,4 +40,6 @@ services:
   # Setup database for testing
   postgres_test:
     image: postgres:9.6
-   
+    ports:
+      - "5432:5432"
+    en
