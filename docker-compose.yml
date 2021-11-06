@@ -38,4 +38,6 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
   # Setup database for testing
-  postgres_
+  postgres_test:
+    image: postgres:9.6
+   
