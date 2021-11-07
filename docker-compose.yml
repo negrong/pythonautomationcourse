@@ -44,4 +44,5 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_DB: smart_bank_test
-      POSTGRES
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD
