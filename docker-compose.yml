@@ -45,4 +45,7 @@ services:
     environment:
       POSTGRES_DB: smart_bank_test
       POSTGRES_USER: dev
-      POSTGRES_PASSWORD
+      POSTGRES_PASSWORD: dev123
+
+# Define the volumes
+v
