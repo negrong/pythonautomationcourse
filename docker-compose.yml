@@ -48,4 +48,5 @@ services:
       POSTGRES_PASSWORD: dev123
 
 # Define the volumes
-v
+volumes:
+  pgdata:
