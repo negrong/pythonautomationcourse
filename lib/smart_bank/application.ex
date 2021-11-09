@@ -1,3 +1,3 @@
 defmodule SmartBank.Application do
   # See https://hexdocs.pm/elixir/Application.html
-  # for mo
+  # for more information on OTP Applicati
