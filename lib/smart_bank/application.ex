@@ -3,4 +3,6 @@ defmodule SmartBank.Application do
   # for more information on OTP Applications
   @moduledoc false
 
-  use Applicati
+  use Application
+
+  def start(_type, _args) d
