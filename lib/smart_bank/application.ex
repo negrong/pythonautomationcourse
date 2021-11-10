@@ -5,4 +5,5 @@ defmodule SmartBank.Application do
 
   use Application
 
-  def start(_type, _args) d
+  def start(_type, _args) do
+    # List all child process
