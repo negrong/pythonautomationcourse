@@ -6,4 +6,5 @@ defmodule SmartBank.Application do
   use Application
 
   def start(_type, _args) do
-    # List all child process
+    # List all child processes to be supervised
+    child
