@@ -7,4 +7,5 @@ defmodule SmartBank.Application do
 
   def start(_type, _args) do
     # List all child processes to be supervised
-    child
+    children = [
+      # Start the Ecto 
