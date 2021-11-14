@@ -11,4 +11,5 @@ defmodule SmartBank.Application do
       # Start the Ecto repository
       SmartBank.Repo,
       # Start the endpoint when the application starts
-      SmartBa
+      SmartBankWeb.Endpoint
+      # Starts a w
