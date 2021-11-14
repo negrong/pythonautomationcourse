@@ -10,4 +10,5 @@ defmodule SmartBank.Application do
     children = [
       # Start the Ecto repository
       SmartBank.Repo,
-      # Start the endpoint whe
+      # Start the endpoint when the application starts
+      SmartBa
