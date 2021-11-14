@@ -12,4 +12,4 @@ defmodule SmartBank.Application do
       SmartBank.Repo,
       # Start the endpoint when the application starts
       SmartBankWeb.Endpoint
-      # Starts a w
+      # Starts a worker by calling: SmartBank.Worker.s
