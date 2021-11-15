@@ -12,4 +12,5 @@ defmodule SmartBank.Application do
       SmartBank.Repo,
       # Start the endpoint when the application starts
       SmartBankWeb.Endpoint
-      # Starts a worker by calling: SmartBank.Worker.s
+      # Starts a worker by calling: SmartBank.Worker.start_link(arg)
+      # {
