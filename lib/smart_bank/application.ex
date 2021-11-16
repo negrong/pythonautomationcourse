@@ -16,4 +16,4 @@ defmodule SmartBank.Application do
       # {SmartBank.Worker, arg},
     ]
 
-    # S
+    # See https://hexdocs.pm/elixir/Super
