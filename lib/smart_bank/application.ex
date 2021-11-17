@@ -16,4 +16,5 @@ defmodule SmartBank.Application do
       # {SmartBank.Worker, arg},
     ]
 
-    # See https://hexdocs.pm/elixir/Super
+    # See https://hexdocs.pm/elixir/Supervisor.html
+    # for other strategies a
