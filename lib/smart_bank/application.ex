@@ -17,4 +17,5 @@ defmodule SmartBank.Application do
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
-    # for other strategies a
+    # for other strategies and supported options
+    op
