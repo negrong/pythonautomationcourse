@@ -22,4 +22,4 @@ defmodule SmartBank.Application do
     Supervisor.start_link(children, opts)
   end
 
-  # Tell Phoeni
+  # Tell Phoenix to update the endpoint confi
