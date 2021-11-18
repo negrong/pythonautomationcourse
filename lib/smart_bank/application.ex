@@ -23,4 +23,5 @@ defmodule SmartBank.Application do
   end
 
   # Tell Phoenix to update the endpoint configuration
-  # whenever the application i
+  # whenever the application is updated.
+  def config_change(chang
