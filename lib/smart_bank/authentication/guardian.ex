@@ -1,1 +1,1 @@
-defmodule Smart
+defmodule SmartBank.Authentication.Guardian do
