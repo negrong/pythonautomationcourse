@@ -5,3 +5,4 @@ defmodule SmartBank.Authentication.Guardian do
 
   alias SmartBank.Authentication
 
+  def subject_for_token(user, _clai
