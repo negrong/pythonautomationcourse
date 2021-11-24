@@ -14,4 +14,4 @@ defmodule SmartBank.Authentication.Guardian do
     id = claims["sub"]
     Authentication.get_user(id)
   end
-en
+end
