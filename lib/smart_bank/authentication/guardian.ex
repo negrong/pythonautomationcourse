@@ -10,4 +10,4 @@ defmodule SmartBank.Authentication.Guardian do
     {:ok, sub}
   end
 
-  def 
+  def resource_from_claims(claims) do
