@@ -12,4 +12,6 @@ defmodule SmartBank.Authentication.Guardian do
 
   def resource_from_claims(claims) do
     id = claims["sub"]
-    Authenticat
+    Authentication.get_user(id)
+  end
+en
