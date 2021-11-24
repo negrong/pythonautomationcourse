@@ -11,3 +11,5 @@ defmodule SmartBank.Authentication.Guardian do
   end
 
   def resource_from_claims(claims) do
+    id = claims["sub"]
+    Authenticat
