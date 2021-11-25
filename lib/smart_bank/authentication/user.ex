@@ -24,3 +24,19 @@ defmodule SmartBank.Authentication.User do
     user
     |> cast(attrs, @required_fields)
     |> validate_required(@required_fields)
+    |> validate_format(:email, ~r/@/)
+    |> unique_constraint(:email)
+    |> put_pass_hash()
+  end
+
+  defp put_pass_hash(changeset) do
+    case Map.has_key?(changeset.changes, :password) do
+      true ->
+        password = changeset.changes.password
+        put_change(changeset, :password_hash, Comeonin.Bcrypt.hashpwsalt(password))
+
+      false ->
+        changeset
+    end
+  end
+end
