@@ -1,1 +1,2 @@
-defmodule SmartBank.Aut
+defmodule SmartBank.Authentication do
+  @moduled
