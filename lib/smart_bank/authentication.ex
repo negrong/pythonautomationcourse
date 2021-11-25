@@ -1,2 +1,3 @@
 defmodule SmartBank.Authentication do
-  @moduled
+  @moduledoc """
+    Main module of 
