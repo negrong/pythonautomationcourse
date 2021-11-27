@@ -4,4 +4,5 @@ defmodule SmartBank.Authentication do
     This module has the authetication functions and user management functions
   """
   import Ecto.Query, warn: false
-  alias Sm
+  alias SmartBank.Repo
+  alias SmartBank.Authen
