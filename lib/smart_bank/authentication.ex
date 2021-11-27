@@ -5,4 +5,6 @@ defmodule SmartBank.Authentication do
   """
   import Ecto.Query, warn: false
   alias SmartBank.Repo
-  alias SmartBank.Authen
+  alias SmartBank.Authentication.{Guardian, User}
+
+  @do
