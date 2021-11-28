@@ -7,4 +7,7 @@ defmodule SmartBank.Authentication do
   alias SmartBank.Repo
   alias SmartBank.Authentication.{Guardian, User}
 
-  @do
+  @doc """
+  Return one user by id.
+
+  ## E
