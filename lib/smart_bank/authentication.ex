@@ -10,4 +10,6 @@ defmodule SmartBank.Authentication do
   @doc """
   Return one user by id.
 
-  ## E
+  ## Examples
+
+      iex> get_user(us
