@@ -19,4 +19,5 @@ defmodule SmartBank.Authentication do
   """
   def get_user(user_id) do
     User
- 
+    |> Repo.get(user_id)
+    |> Repo.p
