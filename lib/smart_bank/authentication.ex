@@ -17,4 +17,6 @@ defmodule SmartBank.Authentication do
 
 
   """
-  def get
+  def get_user(user_id) do
+    User
+ 
