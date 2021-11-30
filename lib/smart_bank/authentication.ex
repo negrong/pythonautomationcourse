@@ -12,4 +12,9 @@ defmodule SmartBank.Authentication do
 
   ## Examples
 
-      iex> get_user(us
+      iex> get_user(user_id)
+      %User{}
+
+
+  """
+  def get
