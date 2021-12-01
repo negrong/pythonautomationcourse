@@ -21,4 +21,7 @@ defmodule SmartBank.Authentication do
     User
     |> Repo.get(user_id)
     |> Repo.preload([:account])
-   
+    |> format_response()
+  end
+
+  defp fo
