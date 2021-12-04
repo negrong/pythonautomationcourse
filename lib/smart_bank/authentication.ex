@@ -24,4 +24,5 @@ defmodule SmartBank.Authentication do
     |> format_response()
   end
 
-  defp format_response(%User{} = user), do:
+  defp format_response(%User{} = user), do: {:ok, user}
+  defp format_response
