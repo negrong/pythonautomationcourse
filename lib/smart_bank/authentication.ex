@@ -25,4 +25,6 @@ defmodule SmartBank.Authentication do
   end
 
   defp format_response(%User{} = user), do: {:ok, user}
-  defp format_response(_), do: {:error, "User not fo
+  defp format_response(_), do: {:error, "User not found", 404}
+
+  @doc """
