@@ -25,4 +25,4 @@ defmodule SmartBank.Authentication do
   end
 
   defp format_response(%User{} = user), do: {:ok, user}
-  defp format_response
+  defp format_response(_), do: {:error, "User not fo
