@@ -30,4 +30,6 @@ defmodule SmartBank.Authentication do
   @doc """
   Return one user by email.
 
-  ## 
+  ## Examples
+
+      iex> get_user(user_id)
