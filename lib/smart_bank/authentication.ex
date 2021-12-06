@@ -37,4 +37,4 @@ defmodule SmartBank.Authentication do
 
 
   """
-  d
+  def get_user_by_email(email
