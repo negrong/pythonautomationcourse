@@ -39,4 +39,5 @@ defmodule SmartBank.Authentication do
   """
   def get_user_by_email(email) do
     User
-    |> Repo.get_by(email
+    |> Repo.get_by(email: email)
+    |> Repo.preload([:accoun
