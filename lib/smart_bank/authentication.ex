@@ -44,4 +44,7 @@ defmodule SmartBank.Authentication do
     |> format_response()
   end
 
-  @doc ""
+  @doc """
+  Creates a account.
+
+  ## Exampl
