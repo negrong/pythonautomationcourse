@@ -47,4 +47,6 @@ defmodule SmartBank.Authentication do
   @doc """
   Creates a account.
 
-  ## Exampl
+  ## Examples
+
+      iex> create_user(%{fi
