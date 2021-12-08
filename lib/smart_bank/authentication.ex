@@ -49,4 +49,5 @@ defmodule SmartBank.Authentication do
 
   ## Examples
 
-      iex> create_user(%{fi
+      iex> create_user(%{field: value})
+      {:ok, %User{}}
