@@ -53,4 +53,7 @@ defmodule SmartBank.Authentication do
       {:ok, %User{}}
 
       iex> create_user(%{field: bad_value})
-      {:error, %Ect
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_
