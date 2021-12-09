@@ -56,4 +56,6 @@ defmodule SmartBank.Authentication do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_
+  def create_user(attrs) do
+    %User{}
+    |> Use
