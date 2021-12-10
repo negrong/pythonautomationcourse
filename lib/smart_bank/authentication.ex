@@ -63,3 +63,5 @@ defmodule SmartBank.Authentication do
   end
 
   @doc """
+  Authenticates a user
+  Returns {:
