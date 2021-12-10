@@ -58,4 +58,5 @@ defmodule SmartBank.Authentication do
   """
   def create_user(attrs) do
     %User{}
-    |> Use
+    |> User.changeset(attrs)
+    |> Repo.ins
