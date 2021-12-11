@@ -64,4 +64,6 @@ defmodule SmartBank.Authentication do
 
   @doc """
   Authenticates a user
-  Returns {:ok, instance, token} | {:error
+  Returns {:ok, instance, token} | {:error, message}
+  """
+  def a
