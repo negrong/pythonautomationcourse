@@ -66,4 +66,6 @@ defmodule SmartBank.Authentication do
   Authenticates a user
   Returns {:ok, instance, token} | {:error, message}
   """
-  def authenticate_user(email, given_passwor
+  def authenticate_user(email, given_password) do
+    email
+    |> get_user_by_emai
