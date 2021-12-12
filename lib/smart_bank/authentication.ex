@@ -68,4 +68,6 @@ defmodule SmartBank.Authentication do
   """
   def authenticate_user(email, given_password) do
     email
-    |> get_user_by_emai
+    |> get_user_by_email()
+    |> check_password(given_password)
+  
