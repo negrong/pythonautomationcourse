@@ -70,4 +70,6 @@ defmodule SmartBank.Authentication do
     email
     |> get_user_by_email()
     |> check_password(given_password)
-  
+  end
+
+  defp check_password(
