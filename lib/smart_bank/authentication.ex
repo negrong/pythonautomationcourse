@@ -72,4 +72,5 @@ defmodule SmartBank.Authentication do
     |> check_password(given_password)
   end
 
-  defp check_password({:ok, %User{password_hash: pw_hash} =
+  defp check_password({:ok, %User{password_hash: pw_hash} = user}, given_password)
+       when not is
