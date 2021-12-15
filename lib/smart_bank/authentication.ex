@@ -73,4 +73,5 @@ defmodule SmartBank.Authentication do
   end
 
   defp check_password({:ok, %User{password_hash: pw_hash} = user}, given_password)
-       when not is
+       when not is_nil(pw_hash) do
+    with true <
