@@ -74,4 +74,5 @@ defmodule SmartBank.Authentication do
 
   defp check_password({:ok, %User{password_hash: pw_hash} = user}, given_password)
        when not is_nil(pw_hash) do
-    with true <- Comeonin.Bcrypt.checkpw(given_passw
+    with true <- Comeonin.Bcrypt.checkpw(given_password, pw_hash),
+         {:ok, token, _to
