@@ -76,4 +76,6 @@ defmodule SmartBank.Authentication do
        when not is_nil(pw_hash) do
     with true <- Comeonin.Bcrypt.checkpw(given_password, pw_hash),
          {:ok, token, _token_data} <- Guardian.encode_and_sign(user) do
-      {:ok, user, token
+      {:ok, user, token}
+    else
+      _ -> {:error, 
