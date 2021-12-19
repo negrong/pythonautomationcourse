@@ -79,4 +79,7 @@ defmodule SmartBank.Authentication do
       {:ok, user, token}
     else
       _ -> {:error, "unauthenticated", 401}
-  
+    end
+  end
+
+  defp check_passw
