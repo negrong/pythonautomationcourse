@@ -82,4 +82,4 @@ defmodule SmartBank.Authentication do
     end
   end
 
-  defp check_passw
+  defp check_password(_, _), do: {:error, "unauthentic
