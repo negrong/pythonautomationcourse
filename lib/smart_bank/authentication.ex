@@ -78,4 +78,5 @@ defmodule SmartBank.Authentication do
          {:ok, token, _token_data} <- Guardian.encode_and_sign(user) do
       {:ok, user, token}
     else
-      _ -> {:error, 
+      _ -> {:error, "unauthenticated", 401}
+  
