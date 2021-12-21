@@ -20,3 +20,7 @@ defmodule SmartBank.Bank.Account do
 
   def changeset(account, attrs) do
     account
+    |> cast(attrs, @required_fields)
+    |> validate_required(@required_fields)
+  end
+end
