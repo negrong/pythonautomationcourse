@@ -36,3 +36,14 @@ defmodule SmartBank.Bank.Report do
   end
 
   def get_range_month do
+    beginning_of_month = @now |> Timex.beginning_of_month() |> Timex.to_date()
+    end_of_month = @now |> Timex.end_of_month() |> Timex.to_date()
+    {beginning_of_month, end_of_month}
+  end
+
+  def get_range_year do
+    beginning_of_year = @now |> Timex.beginning_of_year() |> Timex.to_date()
+    end_of_year = @now |> Timex.end_of_year() |> Timex.to_date()
+    {beginning_of_year, end_of_year}
+  end
+end
