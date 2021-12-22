@@ -56,3 +56,34 @@ defmodule SmartBank.Bank do
 
       iex> create_account(%{field: value})
       {:ok, %Account{}}
+
+      iex> create_account(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_account(attrs \\ %{}) do
+    %Account{}
+    |> Account.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  @doc """
+  Create user and add account.
+
+  ## Examples
+
+      iex> list_account()
+      [%Account{}, ...]
+
+  """
+  @spec signup(:invalid | %{optional(:__struct__) => none, optional(atom | binary) => any}) :: any
+  def signup(signup_attrs) do
+    with {:ok, user} <- signup_attrs |> Authentication.create_user(),
+         {:ok, account} <- signup_attrs |> Map.merge(%{"user_id" => user.id}) |> create_account(),
+         {:ok, _} <- %{account_id: account.id} |> create_wallet() do
+      {:ok, account, _} = account |> deposit(@inital_deposit_amount)
+      {:ok, account}
+    end
+  end
+
+  @doc """
