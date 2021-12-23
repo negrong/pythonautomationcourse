@@ -87,3 +87,42 @@ defmodule SmartBank.Bank do
   end
 
   @doc """
+  Create transaction deposit to given account.
+
+  ## Examples
+
+      iex> account |> deposit(Money.new(1000))
+      {:ok, %Account{}, %Transaction{}}
+
+  """
+  @spec deposit(SmartBank.Bank.Account.t(), any) :: nil
+  def deposit(%Account{id: account_id} = account, %Money{} = amount) do
+    transaction_attrs = %{account_id: account_id, amount: amount}
+
+    with {:ok, transaction} <- transaction_attrs |> create_transaction(),
+         %Wallet{} = wallet <- account_id |> get_wallet(),
+         {:ok, _} <- wallet |> update_wallet(transaction.amount) do
+      account =
+        account
+        |> Repo.preload(:wallet, force: true)
+        |> Repo.preload(:user, force: true)
+
+      {:ok, account, transaction}
+    end
+  end
+
+  def deposit(%Account{} = account, amount) when is_integer(amount) do
+    account
+    |> deposit(amount |> Money.new())
+  end
+
+  def deposit(_, _), do: {:error, "Operation failed, this account is not valid"}
+
+
+  @doc """
+  Create unique transaction.
+
+  ## Examples
+
+      iex> %{account_id: "uuid", amount: 1000} |> create_transaction()
+      {:ok, %Transaction{}}
