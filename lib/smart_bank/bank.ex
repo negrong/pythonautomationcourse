@@ -126,3 +126,32 @@ defmodule SmartBank.Bank do
 
       iex> %{account_id: "uuid", amount: 1000} |> create_transaction()
       {:ok, %Transaction{}}
+
+  """
+  @spec create_transaction(
+          :invalid
+          | %{optional(:__struct__) => none, optional(atom | binary) => any}
+        ) :: any
+  def create_transaction(attrs \\ %{}) do
+    %Transaction{}
+    |> Transaction.changeset(attrs)
+    |> Repo.insert()
+  end
+
+
+  @doc """
+  Return wallet by account id.
+
+  ## Examples
+
+      iex> account_id |> get_wallet()
+      {:ok, %Wallet{}}
+
+  """
+  @spec get_wallet(any) :: any
+  def get_wallet(account_id) do
+    Wallet
+    |> Repo.get_by(account_id: account_id)
+  end
+
+  defp create_wallet(attrs) do
