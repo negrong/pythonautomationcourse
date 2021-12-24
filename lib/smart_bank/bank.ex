@@ -155,3 +155,37 @@ defmodule SmartBank.Bank do
   end
 
   defp create_wallet(attrs) do
+    attrs = attrs |> Map.merge(%{amount: 0})
+
+    %Wallet{}
+    |> Wallet.changeset(attrs)
+    |> Repo.insert()
+  end
+
+  defp validate_wallet_change(%Wallet{} = wallet, amount) do
+    wallet.amount
+    |> Money.add(amount)
+    |> Money.positive?()
+  end
+
+  defp update_wallet(%Wallet{} = wallet, amount) do
+    if wallet |> validate_wallet_change(amount) do
+      new_amount = wallet.amount |> Money.add(amount)
+
+      wallet
+      |> Wallet.changeset(%{amount: new_amount})
+      |> Repo.update()
+    else
+      {:error, "Invalid changes on wallet", 500}
+    end
+  end
+
+  @doc """
+  Create transaction withdraw to given account.
+
+  ## Examples
+
+      iex> account |> withdraw(Money.new(1000))
+      {:ok, %Account{}, %Transaction{}}
+
+  """
