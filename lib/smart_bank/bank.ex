@@ -230,3 +230,27 @@ defmodule SmartBank.Bank do
   def send_withdraw_mail(%Account{} = account, %Transaction{} = transaction) do
     IO.puts("Money withdraw accomplished!")
     IO.puts("from: transaction@smart-bank.com, to: #{account.user.email}")
+    IO.puts("Withdraw of #{transaction.amount}")
+  end
+
+  @doc """
+  Transfer money between accounts
+
+    ## Examples
+
+      iex> %Account{} |> transfer(%Account{}, Integer.t() | Money.t())
+      %{transaction_a: Map.t(), transaction_b: Map.t()}
+  """
+  @spec transfer(SmartBank.Bank.Account.t(), SmartBank.Bank.Account.t(), integer | Money.t()) :: any
+  def transfer(%Account{id: account_a_id}, %Account{id: account_b_id}, %Money{} = amount) do
+    amount_a =
+      amount
+      |> Money.abs()
+      |> Money.neg()
+
+    amount_b =
+      amount
+      |> Money.abs()
+
+    transaction_a_attrs = %{account_id: account_a_id, amount: amount_a}
+    transaction_b_attrs = %{account_id: account_b_id, amount: amount_b}
