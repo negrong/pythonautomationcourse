@@ -254,3 +254,44 @@ defmodule SmartBank.Bank do
 
     transaction_a_attrs = %{account_id: account_a_id, amount: amount_a}
     transaction_b_attrs = %{account_id: account_b_id, amount: amount_b}
+
+    Repo.transaction(fn ->
+      with {:ok, transaction_a} <- transaction_a_attrs |> create_transaction(),
+           {:ok, transaction_b} <- transaction_b_attrs |> create_transaction(),
+           %Wallet{} = wallet_a <- account_a_id |> get_wallet(),
+           %Wallet{} = wallet_b <- account_b_id |> get_wallet(),
+           {:ok, _} <- wallet_a |> update_wallet(transaction_a.amount),
+           {:ok, _} <- wallet_b |> update_wallet(transaction_b.amount) do
+        %{
+          transaction_a: %{
+            transaction_id: transaction_a.id,
+            account_id: account_a_id,
+            amount: transaction_a.amount,
+            date: transaction_a.inserted_at
+          },
+          transaction_b: %{
+            transaction_id: transaction_b.id,
+            account_id: account_b_id,
+            amount: transaction_b.amount,
+            date: transaction_b.inserted_at
+          }
+        }
+      else
+        _ -> Repo.rollback(:transfer_not_allowed)
+      end
+    end)
+  end
+
+  def transfer(%Account{} = account_a, %Account{} = account_b, amount) do
+    amount = amount |> Money.new()
+
+    account_a
+    |> transfer(account_b, amount)
+  end
+
+  def transfer(_, _, _), do: {:error, "Invalid accounts"}
+
+  @doc """
+  Transfer money between two accounts
+
+    ## Examples
