@@ -189,3 +189,44 @@ defmodule SmartBank.Bank do
       {:ok, %Account{}, %Transaction{}}
 
   """
+  @spec withdraw(SmartBank.Bank.Account.t(), any) :: nil
+  def withdraw(%Account{id: account_id} = account, %Money{} = amount) do
+    amount =
+      amount
+      |> Money.abs()
+      |> Money.neg()
+
+    transaction_attrs = %{account_id: account_id, amount: amount}
+
+    with {:ok, transaction} <- transaction_attrs |> create_transaction(),
+         %Wallet{} = wallet <- account_id |> get_wallet(),
+         {:ok, _} <- wallet |> update_wallet(transaction.amount) do
+      account =
+        account
+        |> Repo.preload(:wallet, force: true)
+        |> Repo.preload(:user, force: true)
+
+      Task.async(fn -> send_withdraw_mail(account, transaction) end)
+      {:ok, account, transaction}
+    end
+  end
+
+  def withdraw(%Account{} = account, amount) when is_integer(amount) do
+    account |> withdraw(amount |> Money.new())
+  end
+
+  def withdraw(_, _), do: {:error, "Invalid Account"}
+
+  @doc """
+  Send message to console about the transaction
+
+    ## Examples
+
+      iex> %Account{} |> send_withdraw_mail(%Transaction{})
+      "Money withdraw accomplished!"
+      "from: transaction@smart-bank.com, to: email"
+      "Withdraw of amount"
+  """
+  def send_withdraw_mail(%Account{} = account, %Transaction{} = transaction) do
+    IO.puts("Money withdraw accomplished!")
+    IO.puts("from: transaction@smart-bank.com, to: #{account.user.email}")
