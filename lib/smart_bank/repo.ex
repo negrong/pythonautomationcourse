@@ -1,3 +1,4 @@
 defmodule SmartBank.Repo do
   use Ecto.Repo,
-    otp_a
+    otp_app: :SmartBank,
+    adapter: Ecto.Ad
