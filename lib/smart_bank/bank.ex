@@ -335,3 +335,9 @@ defmodule SmartBank.Bank do
     transactions
     |> Enum.group_by(&(&1.date |> Timex.format!("{0M}")))
   end
+
+  defp group_by_day(transactions) do
+    transactions
+    |> Enum.group_by(&(&1.date |> Timex.format!("{0D}")))
+  end
+end
