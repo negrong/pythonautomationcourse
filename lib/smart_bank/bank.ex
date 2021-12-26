@@ -295,3 +295,43 @@ defmodule SmartBank.Bank do
   Transfer money between two accounts
 
     ## Examples
+
+      iex> report()
+      %{month: List.t(), today: List.t(), year: List.t()}
+  """
+  def report do
+    %{
+      today: Report.get_all_transactions_today() |> Repo.all() |> process_transaction(),
+      month:
+        Report.get_all_transactions_month()
+        |> Repo.all()
+        |> process_transaction()
+        |> group_by_day(),
+      year:
+        Report.get_all_transactions_year()
+        |> Repo.all()
+        |> process_transaction()
+        |> group_by_month()
+        |> Enum.reduce(%{}, fn {k, v}, acc ->
+          acc
+          |> Map.merge(%{k => v |> group_by_day()})
+        end)
+    }
+  end
+
+  defp process_transaction(transactions) do
+    transactions
+    |> Enum.map(fn t ->
+      %{
+        transaction_id: t.id,
+        account_id: t.account_id,
+        amount: t.amount,
+        date: t.inserted_at
+      }
+    end)
+  end
+
+  defp group_by_month(transactions) do
+    transactions
+    |> Enum.group_by(&(&1.date |> Timex.format!("{0M}")))
+  end
