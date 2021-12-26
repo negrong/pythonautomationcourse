@@ -1,1 +1,3 @@
-defmodule SmartBank.Repo 
+defmodule SmartBank.Repo do
+  use Ecto.Repo,
+    otp_a
