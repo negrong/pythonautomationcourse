@@ -4,4 +4,4 @@ defmodule SmartBank.Utils do
   """
 
   @doc """
-  Recursively
+  Recursively transforms a struct and its nes
