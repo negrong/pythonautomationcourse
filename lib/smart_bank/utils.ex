@@ -5,4 +5,4 @@ defmodule SmartBank.Utils do
 
   @doc """
   Recursively transforms a struct and its nested structs into maps.
-  Preserves 
+  Preserves structs outside of the "
