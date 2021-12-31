@@ -5,4 +5,6 @@ defmodule SmartBank.Utils do
 
   @doc """
   Recursively transforms a struct and its nested structs into maps.
-  Preserves structs outside of the "SmartBank.*" namespace (such as Dat
+  Preserves structs outside of the "SmartBank.*" namespace (such as DateTime).
+  """
+  def recursive_stru
