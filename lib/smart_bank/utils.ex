@@ -7,4 +7,4 @@ defmodule SmartBank.Utils do
   Recursively transforms a struct and its nested structs into maps.
   Preserves structs outside of the "SmartBank.*" namespace (such as DateTime).
   """
-  def recursive_stru
+  def recursive_struct_to_map(%{__struct__
