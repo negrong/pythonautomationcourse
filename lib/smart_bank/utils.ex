@@ -11,4 +11,4 @@ defmodule SmartBank.Utils do
     base_namespace = type |> Module.split() |> List.first()
 
     case base_namespace do
-      "
+      "SmartBank" -> struct |> Map.from_st
