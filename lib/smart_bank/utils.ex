@@ -10,4 +10,5 @@ defmodule SmartBank.Utils do
   def recursive_struct_to_map(%{__struct__: type} = struct) do
     base_namespace = type |> Module.split() |> List.first()
 
-    case
+    case base_namespace do
+      "
