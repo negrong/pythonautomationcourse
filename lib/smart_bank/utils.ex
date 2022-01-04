@@ -8,4 +8,6 @@ defmodule SmartBank.Utils do
   Preserves structs outside of the "SmartBank.*" namespace (such as DateTime).
   """
   def recursive_struct_to_map(%{__struct__: type} = struct) do
-    base_namespace = type |> Module
+    base_namespace = type |> Module.split() |> List.first()
+
+    case
