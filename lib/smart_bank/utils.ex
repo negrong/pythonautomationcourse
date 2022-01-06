@@ -12,4 +12,8 @@ defmodule SmartBank.Utils do
 
     case base_namespace do
       "SmartBank" -> struct |> Map.from_struct() |> recursive_struct_to_map()
-      _ -> str
+      _ -> struct
+    end
+  end
+
+  def recursi
