@@ -11,4 +11,5 @@ defmodule SmartBank.Utils do
     base_namespace = type |> Module.split() |> List.first()
 
     case base_namespace do
-      "SmartBank" -> struct |> Map.from_struct() |> recursive_s
+      "SmartBank" -> struct |> Map.from_struct() |> recursive_struct_to_map()
+      _ -> str
