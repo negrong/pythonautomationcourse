@@ -16,4 +16,4 @@ defmodule SmartBank.Utils do
     end
   end
 
-  def recursi
+  def recursive_struct_to_map(%{} = map),
