@@ -17,3 +17,4 @@ defmodule SmartBank.Utils do
   end
 
   def recursive_struct_to_map(%{} = map),
+    do: map |> Enum.map(fn {k, v} -
