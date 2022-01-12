@@ -20,4 +20,4 @@ defmodule SmartBank.Utils do
     do: map |> Enum.map(fn {k, v} -> {k, recursive_struct_to_map(v)} end) |> Map.new()
 
   def recursive_struct_to_map(list) when is_list(list),
-    do: Enum.map(lis
+    do: Enum.map(list, fn v -> recursive_struct_to
