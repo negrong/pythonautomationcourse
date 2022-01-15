@@ -1,1 +1,2 @@
-defm
+defmodule SmartBank do
+  @moduledoc
