@@ -1,2 +1,3 @@
 defmodule SmartBank do
-  @moduledoc
+  @moduledoc """
+  SmartBank keeps the contexts that 
