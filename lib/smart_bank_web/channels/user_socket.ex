@@ -1,1 +1,2 @@
-defmodule SmartBankWeb.Us
+defmodule SmartBankWeb.UserSocket do
+  use Phoenix.S
