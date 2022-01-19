@@ -1,2 +1,5 @@
 defmodule SmartBankWeb.UserSocket do
-  use Phoenix.S
+  use Phoenix.Socket
+
+  ## Channels
+  # channel "
