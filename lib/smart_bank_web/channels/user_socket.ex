@@ -4,4 +4,4 @@ defmodule SmartBankWeb.UserSocket do
   ## Channels
   # channel "room:*", SmartBankWeb.RoomChannel
 
-  # Socket params are passed
+  # Socket params are passed from the client and can
