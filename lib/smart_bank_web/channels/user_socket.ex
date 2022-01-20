@@ -5,4 +5,5 @@ defmodule SmartBankWeb.UserSocket do
   # channel "room:*", SmartBankWeb.RoomChannel
 
   # Socket params are passed from the client and can
-  # be used to verify and authent
+  # be used to verify and authenticate a user. After
+  # ve
