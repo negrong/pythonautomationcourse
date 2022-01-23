@@ -14,4 +14,4 @@ defmodule SmartBankWeb.UserSocket do
   # To deny connection, return `:error`.
   #
   # See `Phoenix.Token` documentation for examples in
-  # perfo
+  # performing token verification on connect.
