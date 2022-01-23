@@ -11,4 +11,6 @@ defmodule SmartBankWeb.UserSocket do
   #
   #     {:ok, assign(socket, :user_id, verified_user_id)}
   #
-  # To deny connection, return `:error
+  # To deny connection, return `:error`.
+  #
+  # See `Phoenix.Token` documen
