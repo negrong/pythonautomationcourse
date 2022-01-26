@@ -15,4 +15,5 @@ defmodule SmartBankWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  def connect(_params, socket, _co
+  def connect(_params, socket, _connect_info) do
+    {:ok, s
