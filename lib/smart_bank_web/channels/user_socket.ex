@@ -19,4 +19,4 @@ defmodule SmartBankWeb.UserSocket do
     {:ok, socket}
   end
 
-  # Socket id's are
+  # Socket id's are topics that allow you to 
