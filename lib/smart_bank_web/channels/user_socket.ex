@@ -21,4 +21,4 @@ defmodule SmartBankWeb.UserSocket do
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
-  #     def id(socket)
+  #     def id(socket), do: "user_socket:#{socket.assigns.u
