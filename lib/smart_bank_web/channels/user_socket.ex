@@ -23,4 +23,4 @@ defmodule SmartBankWeb.UserSocket do
   #
   #     def id(socket), do: "user_socket:#{socket.assigns.user_id}"
   #
-  # Would allow
+  # Would allow you to broadcast a "disconnect" event and
