@@ -26,4 +26,4 @@ defmodule SmartBankWeb.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #    
+  #     SmartBankWeb.Endpoint.broadcas
