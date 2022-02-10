@@ -28,4 +28,4 @@ defmodule SmartBankWeb.UserSocket do
   #
   #     SmartBankWeb.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
-  # Returning
+  # Returning `nil` makes this socket anonymou
