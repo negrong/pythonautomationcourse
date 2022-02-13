@@ -4,4 +4,4 @@ defmodule SmartBankWeb.V1.AccountController do
   alias SmartBank.Bank
   alias SmartBank.Bank.Account
 
-  action_f
+  action_fallback SmartBankWeb.FallbackCont
