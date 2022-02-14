@@ -7,4 +7,5 @@ defmodule SmartBankWeb.V1.AccountController do
   action_fallback SmartBankWeb.FallbackController
 
   def index(conn, _params) do
-    accounts = Bank.list_account
+    accounts = Bank.list_account()
+    render(conn, "index.json", acc
