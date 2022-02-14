@@ -8,4 +8,7 @@ defmodule SmartBankWeb.V1.AccountController do
 
   def index(conn, _params) do
     accounts = Bank.list_account()
-    render(conn, "index.json", acc
+    render(conn, "index.json", accounts: accounts)
+  end
+
+  def cre
