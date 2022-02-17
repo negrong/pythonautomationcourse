@@ -11,4 +11,5 @@ defmodule SmartBankWeb.V1.AccountController do
     render(conn, "index.json", accounts: accounts)
   end
 
-  def cre
+  def create(conn, account_params) do
+    with
