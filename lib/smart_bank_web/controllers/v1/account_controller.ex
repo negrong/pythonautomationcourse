@@ -12,4 +12,4 @@ defmodule SmartBankWeb.V1.AccountController do
   end
 
   def create(conn, account_params) do
-    with
+    with {:ok, %Account{} = account} <- ac
