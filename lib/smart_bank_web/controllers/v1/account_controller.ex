@@ -12,4 +12,6 @@ defmodule SmartBankWeb.V1.AccountController do
   end
 
   def create(conn, account_params) do
-    with {:ok, %Account{} = account} <- account_params |> Ban
+    with {:ok, %Account{} = account} <- account_params |> Bank.signup() do
+      conn
+     
