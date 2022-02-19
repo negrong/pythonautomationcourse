@@ -1,2 +1,4 @@
 defmodule SmartBankWeb.V1.AuthenticationController do
-  u
+  use SmartBankWeb, :controller
+
+ 
