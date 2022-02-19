@@ -15,4 +15,7 @@ defmodule SmartBankWeb.V1.AccountController do
     with {:ok, %Account{} = account} <- account_params |> Bank.signup() do
       conn
       |> put_status(:created)
-      |> render("show.json", account: 
+      |> render("show.json", account: account)
+    end
+  end
+end
