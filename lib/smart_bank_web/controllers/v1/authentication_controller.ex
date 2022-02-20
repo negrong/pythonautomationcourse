@@ -3,4 +3,6 @@ defmodule SmartBankWeb.V1.AuthenticationController do
 
   alias SmartBank.Authentication
 
-  action_fallback SmartBankWeb.Fallb
+  action_fallback SmartBankWeb.FallbackController
+
+  def signin(conn, pa
