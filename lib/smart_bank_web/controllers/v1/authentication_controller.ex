@@ -3,4 +3,4 @@ defmodule SmartBankWeb.V1.AuthenticationController do
 
   alias SmartBank.Authentication
 
-  ac
+  action_fallback SmartBankWeb.Fallb
