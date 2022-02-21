@@ -6,4 +6,4 @@ defmodule SmartBankWeb.V1.AuthenticationController do
   action_fallback SmartBankWeb.FallbackController
 
   def signin(conn, params) do
-    with {:ok, _, token} <- 
+    with {:ok, _, token} <- params["email"] |> Authentication.a
