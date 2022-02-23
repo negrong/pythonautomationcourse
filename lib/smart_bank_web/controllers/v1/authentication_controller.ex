@@ -8,4 +8,6 @@ defmodule SmartBankWeb.V1.AuthenticationController do
   def signin(conn, params) do
     with {:ok, _, token} <- params["email"] |> Authentication.authenticate_user(params["password"]) do
       conn
-      |> render("Authentication.json",
+      |> render("Authentication.json", token: token)
+    end
+  end
