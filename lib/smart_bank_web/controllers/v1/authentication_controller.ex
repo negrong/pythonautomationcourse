@@ -11,3 +11,4 @@ defmodule SmartBankWeb.V1.AuthenticationController do
       |> render("Authentication.json", token: token)
     end
   end
+end
