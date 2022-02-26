@@ -3,4 +3,6 @@ defmodule SmartBankWeb.V1.TransactionController do
 
   alias SmartBank.Bank
 
-  action_fallback Smart
+  action_fallback SmartBankWeb.FallbackController
+
+  def deposit(conn, %{"a
