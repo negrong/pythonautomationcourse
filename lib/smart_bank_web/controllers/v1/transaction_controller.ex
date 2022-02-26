@@ -5,4 +5,5 @@ defmodule SmartBankWeb.V1.TransactionController do
 
   action_fallback SmartBankWeb.FallbackController
 
-  def deposit(conn, %{"a
+  def deposit(conn, %{"amount" => amount}) do
+    account = conn
