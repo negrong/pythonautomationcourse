@@ -6,4 +6,6 @@ defmodule SmartBankWeb.V1.TransactionController do
   action_fallback SmartBankWeb.FallbackController
 
   def deposit(conn, %{"amount" => amount}) do
-    account = conn
+    account = conn.assigns.current_user.account
+
+    with {:o
