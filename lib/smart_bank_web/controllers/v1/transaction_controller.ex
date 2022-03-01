@@ -8,4 +8,4 @@ defmodule SmartBankWeb.V1.TransactionController do
   def deposit(conn, %{"amount" => amount}) do
     account = conn.assigns.current_user.account
 
-    with {:o
+    with {:ok, account, transaction} <- account |
