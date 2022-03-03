@@ -9,3 +9,5 @@ defmodule SmartBankWeb.V1.TransactionController do
     account = conn.assigns.current_user.account
 
     with {:ok, account, transaction} <- account |> Bank.deposit(amount) do
+      conn
+      |> send_transaction_r
