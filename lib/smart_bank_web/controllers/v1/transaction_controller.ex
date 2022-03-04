@@ -16,4 +16,5 @@ defmodule SmartBankWeb.V1.TransactionController do
 
   def deposit(_, _), do: {:error, "Invalid amount", 442}
 
-  def withdraw(conn, %{"amount" => amo
+  def withdraw(conn, %{"amount" => amount}) do
+    account = conn.assigns.c
