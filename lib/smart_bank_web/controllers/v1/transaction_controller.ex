@@ -10,4 +10,6 @@ defmodule SmartBankWeb.V1.TransactionController do
 
     with {:ok, account, transaction} <- account |> Bank.deposit(amount) do
       conn
-      |> send_transaction_response("deposit", tra
+      |> send_transaction_response("deposit", transaction, account)
+    end
+  
