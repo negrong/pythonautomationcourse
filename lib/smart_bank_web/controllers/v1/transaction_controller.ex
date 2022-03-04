@@ -14,4 +14,6 @@ defmodule SmartBankWeb.V1.TransactionController do
     end
   end
 
-  def deposit(_, _), do: {:err
+  def deposit(_, _), do: {:error, "Invalid amount", 442}
+
+  def 
