@@ -12,4 +12,6 @@ defmodule SmartBankWeb.V1.TransactionController do
       conn
       |> send_transaction_response("deposit", transaction, account)
     end
-  
+  end
+
+  def deposit(_, _), do: {:err
