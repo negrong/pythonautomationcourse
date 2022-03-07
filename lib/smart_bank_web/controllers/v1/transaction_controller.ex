@@ -23,4 +23,6 @@ defmodule SmartBankWeb.V1.TransactionController do
       conn
       |> send_transaction_response("withdraw", transaction, account)
     end
-  e
+  end
+
+  def transfer(conn, %{"amount"
