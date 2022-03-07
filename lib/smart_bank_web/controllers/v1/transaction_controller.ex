@@ -21,3 +21,4 @@ defmodule SmartBankWeb.V1.TransactionController do
 
     with {:ok, account, transaction} <- account |> Bank.withdraw(amount) do
       conn
+      |> send_transaction_response("withdr
