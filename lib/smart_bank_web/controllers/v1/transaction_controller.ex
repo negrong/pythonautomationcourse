@@ -19,4 +19,4 @@ defmodule SmartBankWeb.V1.TransactionController do
   def withdraw(conn, %{"amount" => amount}) do
     account = conn.assigns.current_user.account
 
-    with
+    with {:ok, account, transaction} <- account |> Ba
