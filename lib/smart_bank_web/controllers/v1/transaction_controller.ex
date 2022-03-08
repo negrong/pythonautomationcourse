@@ -25,4 +25,4 @@ defmodule SmartBankWeb.V1.TransactionController do
     end
   end
 
-  def transfer(conn, %{"amount"
+  def transfer(conn, %{"amount" => amount, "account_id" => accoun
