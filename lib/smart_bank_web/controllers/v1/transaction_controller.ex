@@ -29,4 +29,5 @@ defmodule SmartBankWeb.V1.TransactionController do
     account_a = conn.assigns.current_user.account
 
     with {:ok, account_b} <- account_b_id |> Bank.get_account(),
-         {:ok, %{transaction_a: t_a, transaction_b
+         {:ok, %{transaction_a: t_a, transaction_b: t_b}} <-
+           acco
