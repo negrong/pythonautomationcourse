@@ -28,4 +28,5 @@ defmodule SmartBankWeb.V1.TransactionController do
   def transfer(conn, %{"amount" => amount, "account_id" => account_b_id}) do
     account_a = conn.assigns.current_user.account
 
-    with {:ok, account_b} <- account_b_id |> Bank.get
+    with {:ok, account_b} <- account_b_id |> Bank.get_account(),
+         {:ok, %{tr
