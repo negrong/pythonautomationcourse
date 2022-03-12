@@ -34,4 +34,7 @@ defmodule SmartBankWeb.V1.TransactionController do
       conn
       |> render("transfer.json", type: "transfer", transaction_a: t_a, transaction_b: t_b)
     end
-  en
+  end
+
+  def report(conn, _params) do
+    t
