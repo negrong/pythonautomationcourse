@@ -39,4 +39,4 @@ defmodule SmartBankWeb.V1.TransactionController do
   def report(conn, _params) do
     transactions = Bank.report()
 
-   
+    with true <- !(transactions.toda
