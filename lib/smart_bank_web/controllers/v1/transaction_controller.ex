@@ -40,4 +40,5 @@ defmodule SmartBankWeb.V1.TransactionController do
     transactions = Bank.report()
 
     with true <- !(transactions.today |> is_nil),
-         true <- !(trans
+         true <- !(transactions.month |> is_nil),
+         true <- !
