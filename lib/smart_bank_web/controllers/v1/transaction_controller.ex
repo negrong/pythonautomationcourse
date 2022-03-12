@@ -32,4 +32,4 @@ defmodule SmartBankWeb.V1.TransactionController do
          {:ok, %{transaction_a: t_a, transaction_b: t_b}} <-
            account_a |> Bank.transfer(account_b, amount) do
       conn
-      |> render("t
+      |> render("transfer.json", type: "transfer
