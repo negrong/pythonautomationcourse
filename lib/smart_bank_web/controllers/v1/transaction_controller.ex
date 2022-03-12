@@ -37,4 +37,6 @@ defmodule SmartBankWeb.V1.TransactionController do
   end
 
   def report(conn, _params) do
-    t
+    transactions = Bank.report()
+
+   
