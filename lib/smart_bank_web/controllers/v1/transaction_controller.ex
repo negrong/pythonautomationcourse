@@ -41,4 +41,5 @@ defmodule SmartBankWeb.V1.TransactionController do
 
     with true <- !(transactions.today |> is_nil),
          true <- !(transactions.month |> is_nil),
-         true <- !
+         true <- !(transactions.year |> is_nil) do
+ 
