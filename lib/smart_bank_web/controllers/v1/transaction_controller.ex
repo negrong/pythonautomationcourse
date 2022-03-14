@@ -50,4 +50,4 @@ defmodule SmartBankWeb.V1.TransactionController do
   def wallet(conn, %{"account_id" => account_id}) do
     user_api_account = conn.assigns.current_user.account
 
-    with true <- user
+    with true <- user_api_account.id == account
