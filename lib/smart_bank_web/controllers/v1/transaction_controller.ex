@@ -45,4 +45,6 @@ defmodule SmartBankWeb.V1.TransactionController do
       conn
       |> render("report_transaction.json", transactions: transactions)
     end
-  en
+  end
+
+  def wallet(conn, %{"accou
