@@ -43,4 +43,4 @@ defmodule SmartBankWeb.V1.TransactionController do
          true <- !(transactions.month |> is_nil),
          true <- !(transactions.year |> is_nil) do
       conn
-      |> render("report_tra
+      |> render("report_transaction.json", transactions: t
