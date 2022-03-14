@@ -47,4 +47,5 @@ defmodule SmartBankWeb.V1.TransactionController do
     end
   end
 
-  def wallet(conn, %{"accou
+  def wallet(conn, %{"account_id" => account_id}) do
+    us
