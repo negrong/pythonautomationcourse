@@ -51,4 +51,4 @@ defmodule SmartBankWeb.V1.TransactionController do
     user_api_account = conn.assigns.current_user.account
 
     with true <- user_api_account.id == account_id,
-         {:ok, accou
+         {:ok, account} <- account_id |> Bank.get_accou
