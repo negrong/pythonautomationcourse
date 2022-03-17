@@ -58,4 +58,6 @@ defmodule SmartBankWeb.V1.TransactionController do
     end
   end
 
-  defp send_transaction_response(conn, transaction_type, transacti
+  defp send_transaction_response(conn, transaction_type, transaction, account) do
+    conn
+    |> rend
