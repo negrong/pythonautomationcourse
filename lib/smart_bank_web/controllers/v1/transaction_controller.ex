@@ -54,4 +54,8 @@ defmodule SmartBankWeb.V1.TransactionController do
          {:ok, account} <- account_id |> Bank.get_account() do
       conn |> render("wallet.json", wallet: account.wallet.amount, account_id: account.id)
     else
-      false -> {:error, "The wallet you are trying to access is from another user, please try to access your own
+      false -> {:error, "The wallet you are trying to access is from another user, please try to access your own wallet", 403}
+    end
+  end
+
+  defp s
