@@ -60,4 +60,5 @@ defmodule SmartBankWeb.V1.TransactionController do
 
   defp send_transaction_response(conn, transaction_type, transaction, account) do
     conn
-    |> rend
+    |> render("transaction.json",
+      transacti
