@@ -62,4 +62,5 @@ defmodule SmartBankWeb.V1.TransactionController do
     conn
     |> render("transaction.json",
       transaction: %{
-        account_id: a
+        account_id: account.id,
+        amount: transaction.
