@@ -65,4 +65,5 @@ defmodule SmartBankWeb.V1.TransactionController do
         account_id: account.id,
         amount: transaction.amount,
         transaction_id: transaction.id,
- 
+        type: transaction_type,
+        date: 
