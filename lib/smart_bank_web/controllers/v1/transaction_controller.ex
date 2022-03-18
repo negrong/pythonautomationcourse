@@ -64,4 +64,5 @@ defmodule SmartBankWeb.V1.TransactionController do
       transaction: %{
         account_id: account.id,
         amount: transaction.amount,
-        transaction_
+        transaction_id: transaction.id,
+ 
