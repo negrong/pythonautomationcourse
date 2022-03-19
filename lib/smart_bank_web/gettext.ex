@@ -1,3 +1,4 @@
 defmodule SmartBankWeb.Gettext do
   @moduledoc """
-  A module providing Internati
+  A module providing Internationalization with a gettext-based API.
+
