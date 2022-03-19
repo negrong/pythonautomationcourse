@@ -1,2 +1,3 @@
 defmodule SmartBankWeb.Gettext do
-  @moduled
+  @moduledoc """
+  A module providing Internati
