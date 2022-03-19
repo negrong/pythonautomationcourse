@@ -1,1 +1,2 @@
-defmodule S
+defmodule SmartBankWeb.Gettext do
+  @moduled
