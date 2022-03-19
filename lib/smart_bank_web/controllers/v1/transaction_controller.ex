@@ -68,4 +68,6 @@ defmodule SmartBankWeb.V1.TransactionController do
         type: transaction_type,
         date: transaction.inserted_at
       }
-    
+    )
+  end
+end
