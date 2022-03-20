@@ -5,4 +5,6 @@ defmodule SmartBankWeb.Gettext do
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import SmartBank
+      import SmartBankWeb.Gettext
+
+      # Simple translati
