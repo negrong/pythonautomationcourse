@@ -18,4 +18,4 @@ defmodule SmartBankWeb.Gettext do
       # Domain-based translation
       dgettext("errors", "Here is the error message to translate")
 
-  See the [Gette
+  See the [Gettext Docs](https://hexdocs
