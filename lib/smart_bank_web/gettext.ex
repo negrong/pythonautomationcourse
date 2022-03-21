@@ -8,4 +8,6 @@ defmodule SmartBankWeb.Gettext do
       import SmartBankWeb.Gettext
 
       # Simple translation
-      gettext("Here is the string to
+      gettext("Here is the string to translate")
+
+      # Plural tra
