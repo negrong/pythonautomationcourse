@@ -13,4 +13,6 @@ defmodule SmartBankWeb.Gettext do
       # Plural translation
       ngettext("Here is the string to translate",
                "Here are the strings to translate",
-     
+               3)
+
+      # Domain-based
