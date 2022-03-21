@@ -7,4 +7,5 @@ defmodule SmartBankWeb.Gettext do
 
       import SmartBankWeb.Gettext
 
-      # Simple translati
+      # Simple translation
+      gettext("Here is the string to
