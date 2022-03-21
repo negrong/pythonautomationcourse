@@ -16,4 +16,6 @@ defmodule SmartBankWeb.Gettext do
                3)
 
       # Domain-based translation
-      dgettext("errors", "Here is the error message to t
+      dgettext("errors", "Here is the error message to translate")
+
+  See the [Gette
