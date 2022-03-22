@@ -1,3 +1,3 @@
 defmodule SmartBankWeb.ErrorHelpers do
   @moduledoc """
-  Conv
+  Conveniences for translating and b
