@@ -3,4 +3,5 @@ defmodule SmartBankWeb.ErrorHelpers do
   Conveniences for translating and building error messages.
   """
 
-  @doc 
+  @doc """
+  Translates an error message using get
