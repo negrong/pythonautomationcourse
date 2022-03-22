@@ -1,1 +1,3 @@
-defmodule SmartBankWeb.E
+defmodule SmartBankWeb.ErrorHelpers do
+  @moduledoc """
+  Conv
