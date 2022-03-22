@@ -4,4 +4,6 @@ defmodule SmartBankWeb.ErrorHelpers do
   """
 
   @doc """
-  Translates an error message using get
+  Translates an error message using gettext.
+  """
+  def translate_error({ms
