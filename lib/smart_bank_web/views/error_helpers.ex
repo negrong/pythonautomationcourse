@@ -7,4 +7,4 @@ defmodule SmartBankWeb.ErrorHelpers do
   Translates an error message using gettext.
   """
   def translate_error({msg, opts}) do
-    # When using gette
+    # When using gettext, we typically pass the strings we want
