@@ -17,4 +17,4 @@ defmodule SmartBankWeb.ErrorHelpers do
     #     dngettext("errors", "1 file", "%{count} files", count)
     #
     # Because the error messages we show in our forms and APIs
-    # are defined i
+    # are defined inside Ecto, we need to translate 
