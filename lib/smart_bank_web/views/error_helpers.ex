@@ -13,4 +13,4 @@ defmodule SmartBankWeb.ErrorHelpers do
     #     # Translate "is invalid" in the "errors" domain
     #     dgettext("errors", "is invalid")
     #
-    #     # Tran
+    #     # Translate the number of files with plural rules
