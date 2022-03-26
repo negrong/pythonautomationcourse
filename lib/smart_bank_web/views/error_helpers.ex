@@ -14,4 +14,6 @@ defmodule SmartBankWeb.ErrorHelpers do
     #     dgettext("errors", "is invalid")
     #
     #     # Translate the number of files with plural rules
-    #     dngettext("errors", "1 file", "%{count} files", c
+    #     dngettext("errors", "1 file", "%{count} files", count)
+    #
+    # Because 
