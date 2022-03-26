@@ -16,4 +16,5 @@ defmodule SmartBankWeb.ErrorHelpers do
     #     # Translate the number of files with plural rules
     #     dngettext("errors", "1 file", "%{count} files", count)
     #
-    # Because the error messages we show in our fo
+    # Because the error messages we show in our forms and APIs
+    # are defined i
