@@ -10,4 +10,5 @@ defmodule SmartBankWeb.ErrorHelpers do
     # When using gettext, we typically pass the strings we want
     # to translate as a static argument:
     #
-    #     # Translate "is invalid" in the "e
+    #     # Translate "is invalid" in the "errors" domain
+    #     dgettext("errors"
