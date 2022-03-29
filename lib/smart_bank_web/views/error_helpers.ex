@@ -18,4 +18,5 @@ defmodule SmartBankWeb.ErrorHelpers do
     #
     # Because the error messages we show in our forms and APIs
     # are defined inside Ecto, we need to translate them dynamically.
-    # This requires us to call the Gettext modul
+    # This requires us to call the Gettext module passing our gettext
+    # backend
