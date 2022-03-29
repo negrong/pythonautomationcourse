@@ -21,4 +21,4 @@ defmodule SmartBankWeb.ErrorHelpers do
     # This requires us to call the Gettext module passing our gettext
     # backend as first argument.
     #
-    # Note
+    # Note we use the "errors" domain, wh
