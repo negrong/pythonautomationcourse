@@ -22,4 +22,5 @@ defmodule SmartBankWeb.ErrorHelpers do
     # backend as first argument.
     #
     # Note we use the "errors" domain, which means translations
-    # should be written to the errors.po file. The :coun
+    # should be written to the errors.po file. The :count option is
+    # set by Ecto and i
