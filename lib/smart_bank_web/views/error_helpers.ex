@@ -23,4 +23,4 @@ defmodule SmartBankWeb.ErrorHelpers do
     #
     # Note we use the "errors" domain, which means translations
     # should be written to the errors.po file. The :count option is
-    # set by Ecto and i
+    # set by Ecto and indicates we should also apply p
