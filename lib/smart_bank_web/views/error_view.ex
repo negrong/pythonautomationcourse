@@ -26,3 +26,12 @@ defmodule SmartBankWeb.ErrorView do
   def render("403.json", %{error: error}) do
     %{errors: %{detail: error}}
   end
+
+  def render("404.json", _) do
+    %{errors: %{detail: "Route not found"}}
+  end
+
+  def render("500.json", %{error: error}) do
+    %{errors: %{detail: error}}
+  end
+end
