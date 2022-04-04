@@ -29,4 +29,5 @@ defmodule SmartBankWeb.ErrorHelpers do
     else
       Gettext.dgettext(SmartBankWeb.Gettext, "errors", msg, opts)
     end
-  e
+  end
+end
