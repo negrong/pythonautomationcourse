@@ -25,4 +25,4 @@ defmodule SmartBankWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext
+      Gettext.dngettext(SmartBankWeb.Gettext, "errors", msg, msg, 
