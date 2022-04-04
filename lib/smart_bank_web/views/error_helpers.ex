@@ -27,4 +27,4 @@ defmodule SmartBankWeb.ErrorHelpers do
     if count = opts[:count] do
       Gettext.dngettext(SmartBankWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.
+      Gettext.dgettext(SmartBankWeb.Gettext, 
