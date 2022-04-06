@@ -4,4 +4,5 @@ defmodule SmartBankWeb.V1.AccountView do
   alias SmartBankWeb.V1.AccountView
 
   def render("index.json", %{accounts: accounts}) do
-    render_many(accou
+    render_many(accounts, AccountView, "account.json")
+ 
