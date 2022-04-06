@@ -1,4 +1,6 @@
 defmodule SmartBankWeb.V1.AccountView do
   use SmartBankWeb, :view
 
-  alias SmartBank
+  alias SmartBankWeb.V1.AccountView
+
+  def rende
