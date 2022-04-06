@@ -3,4 +3,4 @@ defmodule SmartBankWeb.V1.AccountView do
 
   alias SmartBankWeb.V1.AccountView
 
-  def rende
+  def render("index.json", %{accounts: 
