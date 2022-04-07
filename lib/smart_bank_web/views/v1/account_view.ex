@@ -11,4 +11,4 @@ defmodule SmartBankWeb.V1.AccountView do
     render_one(account, AccountView, "account.json")
   end
 
-  def rende
+  def render("account.json", %{account: account}
