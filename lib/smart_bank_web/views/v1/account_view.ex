@@ -12,4 +12,6 @@ defmodule SmartBankWeb.V1.AccountView do
   end
 
   def render("account.json", %{account: account}) do
-    %{id: account.id, name: account.name, email: account.user.
+    %{id: account.id, name: account.name, email: account.user.email}
+  end
+end
