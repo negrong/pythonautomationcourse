@@ -1,1 +1,2 @@
-defmodule SmartBankWeb.V
+defmodule SmartBankWeb.V1.TransactionView do
+  use Smar
