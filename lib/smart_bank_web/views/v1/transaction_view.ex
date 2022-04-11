@@ -6,4 +6,5 @@ defmodule SmartBankWeb.V1.TransactionView do
   def render("transaction.json", %{transaction: transaction}) do
     if transaction |> Map.has_key?(:type) do
       transaction_detail(
-        transaction.a
+        transaction.account_id,
+        transaction.
