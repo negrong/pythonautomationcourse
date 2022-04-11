@@ -7,4 +7,5 @@ defmodule SmartBankWeb.V1.TransactionView do
     if transaction |> Map.has_key?(:type) do
       transaction_detail(
         transaction.account_id,
-        transaction.
+        transaction.amount,
+        transaction.da
