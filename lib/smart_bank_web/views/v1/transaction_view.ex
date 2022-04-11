@@ -8,4 +8,5 @@ defmodule SmartBankWeb.V1.TransactionView do
       transaction_detail(
         transaction.account_id,
         transaction.amount,
-        transaction.da
+        transaction.date,
+        transaction.transactio
