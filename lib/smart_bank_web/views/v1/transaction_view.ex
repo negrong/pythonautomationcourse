@@ -13,4 +13,5 @@ defmodule SmartBankWeb.V1.TransactionView do
         transaction.type
       )
     else
-   
+      transaction_detail(
+        tra
