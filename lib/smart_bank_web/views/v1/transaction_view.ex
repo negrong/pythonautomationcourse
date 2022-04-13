@@ -15,4 +15,5 @@ defmodule SmartBankWeb.V1.TransactionView do
     else
       transaction_detail(
         transaction.account_id,
-        tra
+        transaction.amount,
+        
