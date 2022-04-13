@@ -17,4 +17,7 @@ defmodule SmartBankWeb.V1.TransactionView do
         transaction.account_id,
         transaction.amount,
         transaction.date,
-        t
+        transaction.transaction_id
+      )
+    end
+  en
