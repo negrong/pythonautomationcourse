@@ -20,4 +20,6 @@ defmodule SmartBankWeb.V1.TransactionView do
         transaction.transaction_id
       )
     end
-  en
+  end
+
+  def render("tran
