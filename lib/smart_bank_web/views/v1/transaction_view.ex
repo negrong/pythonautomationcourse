@@ -22,4 +22,4 @@ defmodule SmartBankWeb.V1.TransactionView do
     end
   end
 
-  def render("tran
+  def render("transfer.json", %{type: type, 
