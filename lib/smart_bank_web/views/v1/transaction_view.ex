@@ -25,3 +25,4 @@ defmodule SmartBankWeb.V1.TransactionView do
   def render("transfer.json", %{type: type, transaction_a: t_a, transaction_b: t_b}) do
     %{
       transactions: [
+        render_one(t_a |> M
