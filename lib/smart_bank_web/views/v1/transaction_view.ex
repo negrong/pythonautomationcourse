@@ -28,4 +28,7 @@ defmodule SmartBankWeb.V1.TransactionView do
         render_one(t_a |> Map.put(:type, type), TransactionView, "transaction.json"),
         render_one(t_b |> Map.put(:type, type), TransactionView, "transaction.json")
       ]
- 
+    }
+  end
+
+  def render("repo
