@@ -35,4 +35,5 @@ defmodule SmartBankWeb.V1.TransactionView do
     %{
       today: render_many(transactions.today, TransactionView, "transaction.json"),
       month: transactions.month |> handle_groups(),
-      y
+      year: transactions.year |> handle_groups()
+    }
