@@ -31,4 +31,5 @@ defmodule SmartBankWeb.V1.TransactionView do
     }
   end
 
-  def render("report_transaction.json", %{transac
+  def render("report_transaction.json", %{transactions: transactions}) do
+    %
