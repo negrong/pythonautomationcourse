@@ -32,4 +32,5 @@ defmodule SmartBankWeb.V1.TransactionView do
   end
 
   def render("report_transaction.json", %{transactions: transactions}) do
-    %
+    %{
+      today: render_many(transaction
