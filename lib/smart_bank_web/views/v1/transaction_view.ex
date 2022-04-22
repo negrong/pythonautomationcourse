@@ -39,4 +39,4 @@ defmodule SmartBankWeb.V1.TransactionView do
     }
   end
 
-  def render("wallet.json",
+  def render("wallet.json", %{wallet: wallet, account_id: accoun
