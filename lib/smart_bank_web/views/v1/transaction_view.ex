@@ -47,4 +47,5 @@ defmodule SmartBankWeb.V1.TransactionView do
   end
 
   defp handle_groups(transactions) when transactions |> is_map do
-    tr
+    transactions
+    |> Enum.reduce(%{}
