@@ -37,3 +37,6 @@ defmodule SmartBankWeb.V1.TransactionView do
       month: transactions.month |> handle_groups(),
       year: transactions.year |> handle_groups()
     }
+  end
+
+  def render("wallet.json",
