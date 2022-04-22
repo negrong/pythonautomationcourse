@@ -46,4 +46,4 @@ defmodule SmartBankWeb.V1.TransactionView do
     }
   end
 
-  defp handl
+  defp handle_groups(transactions) when tran
