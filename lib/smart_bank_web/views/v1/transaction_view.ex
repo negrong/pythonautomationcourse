@@ -41,4 +41,5 @@ defmodule SmartBankWeb.V1.TransactionView do
 
   def render("wallet.json", %{wallet: wallet, account_id: account_id}) do
     %{
-      wallet: wallet
+      wallet: wallet |> Money.to_string(),
+      account_i
