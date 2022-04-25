@@ -55,4 +55,7 @@ defmodule SmartBankWeb.V1.TransactionView do
 
   defp handle_groups(transactions) when transactions |> is_list do
     transactions
-    |> render_many(TransactionView, "tra
+    |> render_many(TransactionView, "transaction.json")
+  end
+
+  defp transa
