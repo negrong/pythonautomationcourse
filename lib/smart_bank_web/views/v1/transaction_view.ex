@@ -53,4 +53,4 @@ defmodule SmartBankWeb.V1.TransactionView do
     end)
   end
 
-  defp handle_groups(tran
+  defp handle_groups(transactions) when transactions |> is_lis
