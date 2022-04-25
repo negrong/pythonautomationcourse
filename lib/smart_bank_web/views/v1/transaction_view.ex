@@ -55,4 +55,4 @@ defmodule SmartBankWeb.V1.TransactionView do
 
   defp handle_groups(transactions) when transactions |> is_list do
     transactions
-    |> rend
+    |> render_many(TransactionView, "tra
