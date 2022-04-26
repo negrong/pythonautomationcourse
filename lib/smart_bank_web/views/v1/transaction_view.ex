@@ -58,4 +58,6 @@ defmodule SmartBankWeb.V1.TransactionView do
     |> render_many(TransactionView, "transaction.json")
   end
 
-  defp transaction_detail(account_id, amount, date, transaction_id, type) d
+  defp transaction_detail(account_id, amount, date, transaction_id, type) do
+    account_id
+    |> transaction_de
