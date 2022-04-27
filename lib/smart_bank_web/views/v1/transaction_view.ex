@@ -61,4 +61,6 @@ defmodule SmartBankWeb.V1.TransactionView do
   defp transaction_detail(account_id, amount, date, transaction_id, type) do
     account_id
     |> transaction_detail(amount, date, transaction_id)
- 
+    |> Map.put(:type, type)
+  end
+
