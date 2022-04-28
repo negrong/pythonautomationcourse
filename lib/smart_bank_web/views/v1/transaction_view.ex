@@ -65,4 +65,5 @@ defmodule SmartBankWeb.V1.TransactionView do
   end
 
   def transaction_detail(account_id, amount, date, transaction_id) do
-  
+    %{
+      transaction_id: 
