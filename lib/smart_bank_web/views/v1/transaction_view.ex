@@ -70,4 +70,6 @@ defmodule SmartBankWeb.V1.TransactionView do
       account_id: account_id,
       amount: amount |> Money.to_string(),
       date: date
-   
+    }
+  end
+end
