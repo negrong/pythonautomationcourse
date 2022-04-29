@@ -15,3 +15,24 @@ defmodule SmartBankWeb do
 
   Do NOT define functions inside the quoted expressions
   below. Instead, define any helper function in modules
+  and import those modules here.
+  """
+
+  def controller do
+    quote do
+      use Phoenix.Controller, namespace: SmartBankWeb
+
+      import Plug.Conn
+      import SmartBankWeb.Gettext
+      alias SmartBankWeb.Router.Helpers, as: Routes
+    end
+  end
+
+  def view do
+    quote do
+      use Phoenix.View,
+        root: "lib/SmartBank_web/templates",
+        namespace: SmartBankWeb
+
+      # Import convenience functions from controllers
+      import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
