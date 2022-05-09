@@ -8,4 +8,6 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"Language:
+"Language: en\n"
+
+## From Ecto.Changeset.ca
