@@ -6,4 +6,6 @@
 ##
 ## Use `mix gettext.extract --merge` or `mix gettext.merge`
 ## to merge POT files into PO files.
-msgi
+msgid ""
+msgstr ""
+"Language:
