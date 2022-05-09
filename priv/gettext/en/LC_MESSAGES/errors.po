@@ -12,3 +12,6 @@ msgstr ""
 
 ## From Ecto.Changeset.cast/4
 msgid "can't be blank"
+msgstr ""
+
+## From Ecto.Cha
