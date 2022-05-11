@@ -25,3 +25,5 @@ msgstr ""
 ## From Ecto.Changeset.validate_acceptance/3
 msgid "must be accepted"
 msgstr ""
+
+## From Ecto.Changeset.validate_forma
