@@ -28,4 +28,6 @@ msgstr ""
 
 ## From Ecto.Changeset.validate_format/3
 msgid "has invalid format"
-msg
+msgstr ""
+
+## From Ecto.Changeset.valida
