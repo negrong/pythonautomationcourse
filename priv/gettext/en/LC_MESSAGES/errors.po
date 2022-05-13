@@ -35,4 +35,5 @@ msgid "has an invalid entry"
 msgstr ""
 
 ## From Ecto.Changeset.validate_exclusion/3
-ms
+msgid "is reserved"
+msgstr "
