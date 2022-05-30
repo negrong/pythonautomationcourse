@@ -70,4 +70,4 @@ msgid_plural "should have at least %{count} item(s)"
 msgstr[0] ""
 msgstr[1] ""
 
-msgid "sh
+msgid "should be at most %{count} cha
