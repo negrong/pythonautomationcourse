@@ -7,4 +7,5 @@ defmodule SmartBank.Repo.Migrations.EnableExtensions do
 
   def down do
     execute "DROP EXTENSION \"uuid-ossp\";"
-  en
+  end
+end
