@@ -1,1 +1,2 @@
-defmodule SmartBan
+defmodule SmartBank.Repo.Migrations.CreateAccounts do
+  
