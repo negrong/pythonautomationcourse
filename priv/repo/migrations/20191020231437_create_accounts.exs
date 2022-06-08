@@ -3,4 +3,4 @@ defmodule SmartBank.Repo.Migrations.CreateAccounts do
 
   def change do
     create table(:accounts, primary_key: false) do
-      add :
+      add :id, :uuid, primary_key: true
