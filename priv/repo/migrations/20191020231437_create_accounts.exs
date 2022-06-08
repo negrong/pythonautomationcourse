@@ -7,4 +7,7 @@ defmodule SmartBank.Repo.Migrations.CreateAccounts do
       add :user_id, references(:users, type: :uuid)
       add :name, :string
 
-      
+      timestamps()
+    end
+  end
+end
