@@ -1,1 +1,2 @@
-defmo
+defmodule SmartBank.AuthTest do
+  use
