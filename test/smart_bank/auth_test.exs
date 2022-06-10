@@ -4,4 +4,6 @@ defmodule SmartBank.AuthTest do
   alias SmartBank.Authentication
   alias SmartBank.Authentication.User
 
-  import
+  import SmartBank.Factory
+
+  @valid_us
