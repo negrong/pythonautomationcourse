@@ -1,4 +1,5 @@
 defmodule SmartBank.AuthTest do
   use SmartBank.DataCase
 
-  alias 
+  alias SmartBank.Authentication
+  alias SmartBan
