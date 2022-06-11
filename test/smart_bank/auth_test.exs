@@ -11,4 +11,4 @@ defmodule SmartBank.AuthTest do
   describe "users" do
     test "create_user/1 with valid data creates a user" do
       assert {:ok, %User{} = user} = Authentication.create_user(@valid_user_attrs)
-      assert 
+      assert user.email == @valid_user_attrs[
