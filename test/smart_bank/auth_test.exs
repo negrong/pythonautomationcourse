@@ -14,4 +14,5 @@ defmodule SmartBank.AuthTest do
       assert user.email == @valid_user_attrs["email"]
     end
 
-    test "get u
+    test "get user by id" do
+      user = i
