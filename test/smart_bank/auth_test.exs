@@ -6,4 +6,6 @@ defmodule SmartBank.AuthTest do
 
   import SmartBank.Factory
 
-  @valid_user_attrs %{"email" => Faker.Internet.email(), "password" => Faker.String.ba
+  @valid_user_attrs %{"email" => Faker.Internet.email(), "password" => Faker.String.base64()}
+
+  describe "users
