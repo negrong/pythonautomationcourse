@@ -15,4 +15,5 @@ defmodule SmartBank.AuthTest do
     end
 
     test "get user by id" do
-      user = i
+      user = insert(:user)
+      assert {:ok, %User
