@@ -9,4 +9,5 @@ defmodule SmartBank.AuthTest do
   @valid_user_attrs %{"email" => Faker.Internet.email(), "password" => Faker.String.base64()}
 
   describe "users" do
-    test "create_user/1 with valid data creates a user"
+    test "create_user/1 with valid data creates a user" do
+      assert {:ok, %User{} = user
