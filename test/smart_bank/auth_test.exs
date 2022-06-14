@@ -22,4 +22,4 @@ defmodule SmartBank.AuthTest do
 
     test "no get user by id, why? not user id" do
       insert(:user)
-      ass
+      assert {:error, _, _} = Authentication.get
