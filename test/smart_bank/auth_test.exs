@@ -21,4 +21,5 @@ defmodule SmartBank.AuthTest do
     end
 
     test "no get user by id, why? not user id" do
-    
+      insert(:user)
+      ass
