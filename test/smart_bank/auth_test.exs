@@ -22,4 +22,7 @@ defmodule SmartBank.AuthTest do
 
     test "no get user by id, why? not user id" do
       insert(:user)
-      assert {:error, _, _} = Authentication.get
+      assert {:error, _, _} = Authentication.get_user(Ecto.UUID.generate())
+    end
+
+  
