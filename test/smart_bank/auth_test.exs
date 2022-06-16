@@ -25,4 +25,4 @@ defmodule SmartBank.AuthTest do
       assert {:error, _, _} = Authentication.get_user(Ecto.UUID.generate())
     end
 
-  
+    test "get user by email" do
