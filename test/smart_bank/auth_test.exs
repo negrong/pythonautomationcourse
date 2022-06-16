@@ -31,4 +31,5 @@ defmodule SmartBank.AuthTest do
       assert loaded_user.id == user.id
     end
 
-    test "no get user by email
+    test "no get user by email, why? not user email" do
+      ins
