@@ -27,4 +27,4 @@ defmodule SmartBank.AuthTest do
 
     test "get user by email" do
       user = insert(:user)
-      ass
+      assert {:ok, %User{} = loaded_user} 
