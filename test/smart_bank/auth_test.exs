@@ -26,3 +26,5 @@ defmodule SmartBank.AuthTest do
     end
 
     test "get user by email" do
+      user = insert(:user)
+      ass
