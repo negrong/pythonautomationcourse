@@ -32,4 +32,5 @@ defmodule SmartBank.AuthTest do
     end
 
     test "no get user by email, why? not user email" do
-      ins
+      insert(:user)
+      assert {:error,
