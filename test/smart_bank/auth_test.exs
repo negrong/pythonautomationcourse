@@ -36,4 +36,5 @@ defmodule SmartBank.AuthTest do
       assert {:error, _, _} = Authentication.get_user_by_email(Faker.Internet.email())
     end
 
- 
+    test "check pwd and pass" do
+      u
