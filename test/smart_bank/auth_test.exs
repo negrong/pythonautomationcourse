@@ -33,4 +33,7 @@ defmodule SmartBank.AuthTest do
 
     test "no get user by email, why? not user email" do
       insert(:user)
-      assert {:error, _, _} = Authentication.get_user_by_email(Fa
+      assert {:error, _, _} = Authentication.get_user_by_email(Faker.Internet.email())
+    end
+
+ 
