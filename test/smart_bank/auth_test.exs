@@ -39,4 +39,7 @@ defmodule SmartBank.AuthTest do
     test "check pwd and pass" do
       user_attr = %{"email" => Faker.Internet.email(), "password" => Faker.String.base64()}
       assert {:ok, %User{} = user} = Authentication.create_user(user_attr)
-      assert {:ok, _, _} = Authentication.authenticate_user(user.email, user_att
+      assert {:ok, _, _} = Authentication.authenticate_user(user.email, user_attr["password"])
+    end
+
+    test "check pw
