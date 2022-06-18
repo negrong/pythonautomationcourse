@@ -43,4 +43,4 @@ defmodule SmartBank.AuthTest do
     end
 
     test "check pwd and fail" do
-      user_attr = %{"email" => Fake
+      user_attr = %{"email" => Faker.Internet.email(), "passwo
