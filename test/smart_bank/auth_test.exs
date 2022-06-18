@@ -42,4 +42,5 @@ defmodule SmartBank.AuthTest do
       assert {:ok, _, _} = Authentication.authenticate_user(user.email, user_attr["password"])
     end
 
-    test "check pw
+    test "check pwd and fail" do
+      user_a
