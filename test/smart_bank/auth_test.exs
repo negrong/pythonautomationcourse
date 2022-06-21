@@ -48,4 +48,4 @@ defmodule SmartBank.AuthTest do
       assert {:error, _, _} = Authentication.authenticate_user(user.email, Ecto.UUID.generate())
 
       assert {:error, _, _} =
-               Authenticati
+               Authentication.authenticate_user(Faker.Int
