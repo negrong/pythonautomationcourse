@@ -47,4 +47,5 @@ defmodule SmartBank.AuthTest do
       assert {:ok, %User{} = user} = Authentication.create_user(user_attr)
       assert {:error, _, _} = Authentication.authenticate_user(user.email, Ecto.UUID.generate())
 
-      assert {:error, _, _
+      assert {:error, _, _} =
+               Authenticati
