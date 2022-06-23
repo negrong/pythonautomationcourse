@@ -1,1 +1,2 @@
-defmodule SmartBank
+defmodule SmartBank.UtilsTest do
+  use ExU
