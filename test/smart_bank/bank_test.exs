@@ -97,3 +97,30 @@ defmodule SmartBank.BankTest do
                  "password" => Faker.String.base64()
                }
                |> Bank.signup()
+
+      assert {:ok, %{transaction_a: transaction_a, transaction_b: transaction_b}} =
+               account_a |> Bank.transfer(account_b, 50_000)
+
+      assert transaction_a.account_id == account_a.id
+      assert transaction_b.account_id == account_b.id
+      assert transaction_a |> Map.has_key?(:transaction_id)
+      assert transaction_b |> Map.has_key?(:transaction_id)
+
+      {:ok, account_a} = Bank.get_account(account_a.id)
+      {:ok, account_b} = Bank.get_account(account_b.id)
+
+      assert account_a.wallet.amount |> Money.equals?(Money.new(50_000))
+      assert account_b.wallet.amount |> Money.equals?(Money.new(150_000))
+    end
+
+    test "create a transfer between 2 accounts with invalid params" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account_a} = Bank.signup(signup_attr)
+
+      assert {:ok, %Account{} = account_b} =
+               %{
+                 "email" => Faker.Internet.email(),
+                 "name" => Faker.Name.name(),
+                 "password" => Faker.String.base64()
+               }
+               |> Bank.signup()
