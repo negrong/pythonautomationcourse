@@ -35,3 +35,35 @@ defmodule SmartBank.BankTest do
       assert {:ok, %Account{} = account} = Bank.create_account(account_attr)
       assert account.name == @valid_account_attrs["name"]
     end
+
+    test "create_account/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Bank.create_account(@invalid_account_attrs)
+    end
+
+    test "test signup" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account} = Bank.signup(signup_attr)
+    end
+
+    test "test signup with invalid attrs" do
+      assert {:error, %Ecto.Changeset{}} = Bank.signup(@invalid_account_attrs)
+    end
+  end
+
+  describe "transacitonal" do
+    test "create deposit with valid attrs" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account} = Bank.signup(signup_attr)
+      assert account.wallet.amount |> Money.equals?(Money.new(100_000))
+
+      assert {:ok, account, transaction} = account |> Bank.deposit(100_000)
+      assert account.wallet.amount |> Money.equals?(Money.new(200_000))
+      assert transaction.amount |> Money.equals?(Money.new(100_000))
+    end
+
+    test "create deposit with invalid attrs" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account} = Bank.signup(signup_attr)
+      assert account.wallet.amount |> Money.equals?(Money.new(100_000))
+
+      assert {:error, _} = account |> Bank.deposit(nil)
