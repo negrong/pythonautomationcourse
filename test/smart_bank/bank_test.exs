@@ -124,3 +124,20 @@ defmodule SmartBank.BankTest do
                  "password" => Faker.String.base64()
                }
                |> Bank.signup()
+
+      assert {:error, _} = account_a |> Bank.transfer(account_b, 200_000)
+    end
+
+    test "send email" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account} = Bank.signup(signup_attr)
+      assert {:ok, account, transaction} = account |> Bank.deposit(100_000)
+
+      email_messages = fn ->
+        account |> Bank.send_withdraw_mail(transaction)
+      end
+
+      assert capture_io(email_messages) =~ "Money withdraw accomplished!"
+    end
+  end
+end
