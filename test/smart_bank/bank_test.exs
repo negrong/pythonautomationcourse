@@ -67,3 +67,33 @@ defmodule SmartBank.BankTest do
       assert account.wallet.amount |> Money.equals?(Money.new(100_000))
 
       assert {:error, _} = account |> Bank.deposit(nil)
+    end
+
+    test "create withdraw with valid attrs" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account} = Bank.signup(signup_attr)
+      assert account.wallet.amount |> Money.equals?(Money.new(100_000))
+
+      assert {:ok, account, _} = account |> Bank.withdraw(50_000)
+      assert account.wallet.amount |> Money.equals?(Money.new(50_000))
+    end
+
+    test "create withdraw with amount greater than limit" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account} = Bank.signup(signup_attr)
+      assert account.wallet.amount |> Money.equals?(Money.new(100_000))
+
+      assert {:error, _, 500} = account |> Bank.withdraw(100_001)
+    end
+
+    test "create a transfer between 2 accounts with valid params" do
+      signup_attr = @valid_account_attrs |> Map.merge(@valid_user_attrs)
+      assert {:ok, %Account{} = account_a} = Bank.signup(signup_attr)
+
+      assert {:ok, %Account{} = account_b} =
+               %{
+                 "email" => Faker.Internet.email(),
+                 "name" => Faker.Name.name(),
+                 "password" => Faker.String.base64()
+               }
+               |> Bank.signup()
