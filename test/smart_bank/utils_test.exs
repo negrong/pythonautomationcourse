@@ -1,2 +1,4 @@
 defmodule SmartBank.UtilsTest do
-  use ExU
+  use ExUnit.Case
+
+  import SmartBan
