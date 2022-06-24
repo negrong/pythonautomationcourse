@@ -1,4 +1,4 @@
 defmodule SmartBank.UtilsTest do
   use ExUnit.Case
 
-  import SmartBan
+  import SmartBank.Utils, only: [recursive_struct
