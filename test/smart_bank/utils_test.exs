@@ -3,4 +3,6 @@ defmodule SmartBank.UtilsTest do
 
   import SmartBank.Utils, only: [recursive_struct_to_map: 1]
 
-  alias SmartBank.Ban
+  alias SmartBank.Bank.Account
+
+  test "recursive struct hand
