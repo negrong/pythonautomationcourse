@@ -17,4 +17,6 @@ defmodule SmartBank.UtilsTest do
   end
 
   def simulate_changeset_error do
-    %
+    %Account{}
+    |> Account.changeset(%{})
+ 
