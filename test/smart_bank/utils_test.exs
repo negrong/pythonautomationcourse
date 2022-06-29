@@ -10,3 +10,4 @@ defmodule SmartBank.UtilsTest do
     assert struct == struct |> recursive_struct_to_map
 
     errors = struct.errors
+    assert errors == struct.errors |>
