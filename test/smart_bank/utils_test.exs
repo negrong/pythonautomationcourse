@@ -6,4 +6,5 @@ defmodule SmartBank.UtilsTest do
   alias SmartBank.Bank.Account
 
   test "recursive struct handler" do
-    struct = simulate_ch
+    struct = simulate_changeset_error()
+    assert st
