@@ -7,4 +7,6 @@ defmodule SmartBank.UtilsTest do
 
   test "recursive struct handler" do
     struct = simulate_changeset_error()
-    assert struct == struct |> recursive_
+    assert struct == struct |> recursive_struct_to_map
+
+    errors = struct.errors
