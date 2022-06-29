@@ -12,4 +12,5 @@ defmodule SmartBank.UtilsTest do
     errors = struct.errors
     assert errors == struct.errors |> recursive_struct_to_map
 
-    data = str
+    data = struct.data
+    assert data != struct.da
