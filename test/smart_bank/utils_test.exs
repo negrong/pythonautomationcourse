@@ -16,4 +16,5 @@ defmodule SmartBank.UtilsTest do
     assert data != struct.data |> recursive_struct_to_map
   end
 
-  de
+  def simulate_changeset_error do
+    %
