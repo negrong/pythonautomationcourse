@@ -1,1 +1,2 @@
-defmodule SmartBankWeb.Acco
+defmodule SmartBankWeb.AccountControllerTest do
+  use SmartBankWe
