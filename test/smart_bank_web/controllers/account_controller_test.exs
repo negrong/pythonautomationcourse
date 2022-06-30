@@ -8,4 +8,5 @@ defmodule SmartBankWeb.AccountControllerTest do
     [jwt_account_token: jwt_account_token()]
   end
 
-  describe "ind
+  describe "index" do
+    test "lists all accounts withou
