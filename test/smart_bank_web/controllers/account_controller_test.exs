@@ -1,2 +1,4 @@
 defmodule SmartBankWeb.AccountControllerTest do
-  use SmartBankWe
+  use SmartBankWeb.ConnCase
+
+  import SmartBank.Fa
