@@ -5,4 +5,4 @@ defmodule SmartBankWeb.AccountControllerTest do
 
   setup %{conn: conn} do
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
-    [jwt_account_tok
+    [jwt_account_token: jwt_account_token(
