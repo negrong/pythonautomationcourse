@@ -4,4 +4,4 @@ defmodule SmartBankWeb.AccountControllerTest do
   import SmartBank.Factory
 
   setup %{conn: conn} do
-    {:ok, conn: put_req_head
+    {:ok, conn: put_req_header(conn, "accept", "application/
