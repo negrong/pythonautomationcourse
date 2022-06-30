@@ -1,4 +1,7 @@
 defmodule SmartBankWeb.AccountControllerTest do
   use SmartBankWeb.ConnCase
 
-  import SmartBank.Fa
+  import SmartBank.Factory
+
+  setup %{conn: conn} do
+   
