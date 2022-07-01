@@ -13,4 +13,5 @@ defmodule SmartBankWeb.AccountControllerTest do
       conn: conn,
       jwt_account_token: jwt_account_token
     } do
-      conn = conn |> put_req_header("authoriza
+      conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
+ 
