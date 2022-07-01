@@ -14,4 +14,4 @@ defmodule SmartBankWeb.AccountControllerTest do
       jwt_account_token: jwt_account_token
     } do
       conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
- 
+      conn = get(conn, Routes.
