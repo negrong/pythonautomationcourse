@@ -9,4 +9,5 @@ defmodule SmartBankWeb.AccountControllerTest do
   end
 
   describe "index" do
-    test "lists all accounts withou
+    test "lists all accounts without accounts created", %{
+      con
