@@ -10,4 +10,5 @@ defmodule SmartBankWeb.AccountControllerTest do
 
   describe "index" do
     test "lists all accounts without accounts created", %{
-      con
+      conn: conn,
+      jwt_account_token: j
