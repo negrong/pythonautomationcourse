@@ -18,4 +18,4 @@ defmodule SmartBankWeb.AccountControllerTest do
       assert conn |> json_response(200) |> length() == 1
     end
 
-    t
+    test "lists all accounts", %{co
