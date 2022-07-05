@@ -18,4 +18,5 @@ defmodule SmartBankWeb.AccountControllerTest do
       assert conn |> json_response(200) |> length() == 1
     end
 
-    test "lists all accounts", %{conn: conn, jwt_account_token: jwt_a
+    test "lists all accounts", %{conn: conn, jwt_account_token: jwt_account_token} do
+      conn = conn |> 
