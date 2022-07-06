@@ -22,4 +22,4 @@ defmodule SmartBankWeb.AccountControllerTest do
       conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
 
       1..10
-      |> Enum.each(&insert(:a
+      |> Enum.each(&insert(:account, name: "Account #{&1}"))
