@@ -26,4 +26,4 @@ defmodule SmartBankWeb.AccountControllerTest do
 
       conn = get(conn, Routes.v1_account_path(conn, :index))
       account_list = json_response(conn, 200)
-      
+      assert account_list |> length() == 1
