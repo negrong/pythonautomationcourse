@@ -23,3 +23,5 @@ defmodule SmartBankWeb.AccountControllerTest do
 
       1..10
       |> Enum.each(&insert(:account, name: "Account #{&1}"))
+
+      conn = get(conn, Routes.v1_acc
