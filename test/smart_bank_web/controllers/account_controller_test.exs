@@ -25,4 +25,5 @@ defmodule SmartBankWeb.AccountControllerTest do
       |> Enum.each(&insert(:account, name: "Account #{&1}"))
 
       conn = get(conn, Routes.v1_account_path(conn, :index))
-      account_
+      account_list = json_response(conn, 200)
+      
