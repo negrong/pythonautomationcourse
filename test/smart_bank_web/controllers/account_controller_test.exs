@@ -32,4 +32,4 @@ defmodule SmartBankWeb.AccountControllerTest do
 
   describe "create" do
     test "create account", %{conn: conn, jwt_account_token: jwt_account_token} do
-      conn = 
+      conn = conn |> put_req_header("author
