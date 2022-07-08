@@ -31,4 +31,5 @@ defmodule SmartBankWeb.AccountControllerTest do
   end
 
   describe "create" do
-    test "create account", %{conn: conn, jwt_account_token: jw
+    test "create account", %{conn: conn, jwt_account_token: jwt_account_token} do
+      conn = 
