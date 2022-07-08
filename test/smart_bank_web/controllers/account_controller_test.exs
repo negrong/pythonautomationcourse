@@ -30,4 +30,5 @@ defmodule SmartBankWeb.AccountControllerTest do
     end
   end
 
-  describe "create"
+  describe "create" do
+    test "create account", %{conn: conn, 
