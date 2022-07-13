@@ -40,4 +40,4 @@ defmodule SmartBankWeb.AccountControllerTest do
         password: Faker.String.base64()
       }
 
-      conn = post(conn, R
+      conn = post(conn, Routes.v1_account_path(conn, :cr
