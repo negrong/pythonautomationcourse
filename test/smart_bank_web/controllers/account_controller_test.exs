@@ -35,4 +35,5 @@ defmodule SmartBankWeb.AccountControllerTest do
       conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
 
       account_params = %{
-        name: F
+        name: Faker.Name.name(),
+        email: F
