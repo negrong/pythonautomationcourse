@@ -36,4 +36,5 @@ defmodule SmartBankWeb.AccountControllerTest do
 
       account_params = %{
         name: Faker.Name.name(),
-        email: F
+        email: Faker.Internet.email(),
+       
