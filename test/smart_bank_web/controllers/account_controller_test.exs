@@ -37,4 +37,7 @@ defmodule SmartBankWeb.AccountControllerTest do
       account_params = %{
         name: Faker.Name.name(),
         email: Faker.Internet.email(),
-        password: Faker.String.base64
+        password: Faker.String.base64()
+      }
+
+      conn = post(conn, R
