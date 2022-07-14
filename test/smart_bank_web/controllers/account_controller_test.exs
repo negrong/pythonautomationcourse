@@ -41,4 +41,6 @@ defmodule SmartBankWeb.AccountControllerTest do
       }
 
       conn = post(conn, Routes.v1_account_path(conn, :create), account_params)
-      response = json_resp
+      response = json_response(conn, 201)
+
+      assert response
