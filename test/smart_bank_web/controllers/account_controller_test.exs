@@ -40,4 +40,5 @@ defmodule SmartBankWeb.AccountControllerTest do
         password: Faker.String.base64()
       }
 
-      conn = post(conn, Routes.v1_account_path(conn, :cr
+      conn = post(conn, Routes.v1_account_path(conn, :create), account_params)
+      response = json_resp
