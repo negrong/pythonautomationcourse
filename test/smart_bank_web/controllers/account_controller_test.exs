@@ -44,4 +44,4 @@ defmodule SmartBankWeb.AccountControllerTest do
       response = json_response(conn, 201)
 
       assert response["name"] == account_params.name
- 
+      assert response |> 
