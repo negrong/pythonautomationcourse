@@ -47,4 +47,4 @@ defmodule SmartBankWeb.AccountControllerTest do
       assert response |> Map.has_key?("id")
     end
 
-    tes
+    test "not create account. why? inval
