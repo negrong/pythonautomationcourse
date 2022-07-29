@@ -54,4 +54,5 @@ defmodule SmartBankWeb.AccountControllerTest do
       conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
 
       conn = post(conn, Routes.v1_account_path(conn, :create), %{})
-      resp
+      response = json_response(conn, 422)
+      assert 
