@@ -55,4 +55,7 @@ defmodule SmartBankWeb.AccountControllerTest do
 
       conn = post(conn, Routes.v1_account_path(conn, :create), %{})
       response = json_response(conn, 422)
-      assert response |> Map.has_key?("erro
+      assert response |> Map.has_key?("errors")
+    end
+  end
+end
