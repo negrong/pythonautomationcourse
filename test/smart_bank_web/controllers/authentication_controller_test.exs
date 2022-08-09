@@ -28,3 +28,7 @@ defmodule SmartBankWeb.AuthenticationControllerTest do
 
       conn = post(conn, Routes.v1_authentication_path(conn, :signin), signin_map)
       response = json_response(conn, 401)
+      assert response |> Map.has_key?("errors")
+    end
+  end
+end
