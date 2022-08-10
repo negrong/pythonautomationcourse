@@ -68,3 +68,35 @@ defmodule SmartBankWeb.TransactionControllerTest do
   describe "transfer" do
     test "transfer to another account", %{conn: conn, jwt_account_token: jwt_account_token} do
       conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
+      conn = post(conn, Routes.v1_transaction_path(conn, :deposit), %{amount: 30_000})
+
+      account_params = %{
+        name: Faker.Name.name(),
+        email: Faker.Internet.email(),
+        password: Faker.String.base64()
+      }
+
+      conn = post(conn, Routes.v1_account_path(conn, :create), account_params)
+      response = json_response(conn, 201)
+
+      {:ok, account_id} = response |> Map.fetch("id")
+
+      transfer_params = %{
+        account_id: account_id,
+        amount: 10_000
+      }
+
+      conn = post(conn, Routes.v1_transaction_path(conn, :transfer), transfer_params)
+      %{"transactions" => [transaction_a, transaction_b]} = json_response(conn, 200)
+
+      assert transaction_a["transaction_id"] != transaction_b["transaction_id"]
+      assert transaction_a["account_id"] != transaction_b["account_id"]
+
+      amount_a = transaction_a["amount"] |> Money.parse!(:USD)
+      amount_b = transaction_b["amount"] |> Money.parse!(:USD)
+
+      assert amount_a |> Money.add(amount_b) |> Money.equals?(Money.new(0))
+    end
+  end
+
+  describe "report" do
