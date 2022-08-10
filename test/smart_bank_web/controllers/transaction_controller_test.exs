@@ -130,3 +130,35 @@ defmodule SmartBankWeb.TransactionControllerTest do
       1..3
       |> Enum.each(fn x ->
         amount = x * 10_000
+
+        datetime =
+          NaiveDateTime.utc_now()
+          |> NaiveDateTime.add(-172_800, :second)
+          |> NaiveDateTime.truncate(:second)
+
+        insert(:transaction, %{account_id: account_id, inserted_at: datetime, amount: amount})
+      end)
+
+      transfer_params = %{
+        account_id: account_id,
+        amount: 10_000
+      }
+
+      conn = post(conn, Routes.v1_transaction_path(conn, :transfer), transfer_params)
+
+      conn = get(conn, Routes.v1_transaction_path(conn, :report))
+      response = json_response(conn, 200)
+
+      assert response |> Map.has_key?("today")
+      assert response |> Map.has_key?("month")
+      assert response |> Map.has_key?("year")
+
+      assert response["today"] |> length > 0
+      assert response["month"] |> Map.keys() |> length > 0
+      assert response["year"] |> Map.keys() |> length > 0
+    end
+
+    test "empty report", %{conn: conn, jwt_account_token: jwt_account_token} do
+      conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
+      conn = get(conn, Routes.v1_transaction_path(conn, :report))
+      response = json_response(conn, 200)
