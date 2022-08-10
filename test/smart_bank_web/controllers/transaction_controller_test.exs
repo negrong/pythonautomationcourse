@@ -100,3 +100,33 @@ defmodule SmartBankWeb.TransactionControllerTest do
   end
 
   describe "report" do
+    test "report all transactions", %{conn: conn, jwt_account_token: jwt_account_token} do
+      conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
+      conn = post(conn, Routes.v1_transaction_path(conn, :deposit), %{amount: 30_000})
+
+      account_params = %{
+        name: Faker.Name.name(),
+        email: Faker.Internet.email(),
+        password: Faker.String.base64()
+      }
+
+      conn = post(conn, Routes.v1_account_path(conn, :create), account_params)
+      response = json_response(conn, 201)
+
+      {:ok, account_id} = response |> Map.fetch("id")
+
+      1..3
+      |> Enum.each(fn x ->
+        amount = x * 10_000
+
+        datetime =
+          NaiveDateTime.utc_now()
+          |> NaiveDateTime.add(-2_764_800, :second)
+          |> NaiveDateTime.truncate(:second)
+
+        insert(:transaction, %{account_id: account_id, inserted_at: datetime, amount: amount})
+      end)
+
+      1..3
+      |> Enum.each(fn x ->
+        amount = x * 10_000
