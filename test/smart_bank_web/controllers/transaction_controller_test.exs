@@ -162,3 +162,30 @@ defmodule SmartBankWeb.TransactionControllerTest do
       conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
       conn = get(conn, Routes.v1_transaction_path(conn, :report))
       response = json_response(conn, 200)
+
+      assert response |> Map.has_key?("today")
+      assert response |> Map.has_key?("month")
+      assert response |> Map.has_key?("year")
+
+      assert response["today"] |> length == 0
+      assert response["month"] |> Map.keys() |> length == 0
+      assert response["year"] |> Map.keys() |> length == 0
+    end
+  end
+
+  describe "wallet" do
+    test "get wallet", %{conn: conn} do
+      account = insert(:account)
+      insert(:wallet, %{account: account, amount: 0})
+      jwt_account_token = jwt_account_token(%{user: account.user})
+
+      conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
+
+      post(conn, Routes.v1_transaction_path(conn, :deposit), %{
+        amount: 30_000
+      })
+
+      conn = get(conn, Routes.v1_transaction_path(conn, :wallet, account.id))
+      %{"wallet" => wallet, "account_id" => _} = json_response(conn, 200)
+
+      parsed_wallet = wallet |> Money.parse!(:USD)
