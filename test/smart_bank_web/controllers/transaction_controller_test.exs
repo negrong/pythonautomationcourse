@@ -189,3 +189,19 @@ defmodule SmartBankWeb.TransactionControllerTest do
       %{"wallet" => wallet, "account_id" => _} = json_response(conn, 200)
 
       parsed_wallet = wallet |> Money.parse!(:USD)
+
+      assert parsed_wallet |> Money.equals?(Money.new(30_000))
+    end
+
+    test "no get wallet. why? account does not exist", %{
+      conn: conn,
+      jwt_account_token: jwt_account_token
+    } do
+      conn = conn |> put_req_header("authorization", "Bearer #{jwt_account_token}")
+      conn = get(conn, Routes.v1_transaction_path(conn, :wallet, Ecto.UUID.generate()))
+      response = json_response(conn, 403)
+
+      assert response |> Map.has_key?("errors")
+    end
+  end
+end
