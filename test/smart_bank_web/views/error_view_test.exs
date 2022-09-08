@@ -1,1 +1,2 @@
-defmodule SmartBankWeb.Err
+defmodule SmartBankWeb.ErrorViewTest do
+  use SmartBan
