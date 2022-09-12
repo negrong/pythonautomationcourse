@@ -1,2 +1,4 @@
 defmodule SmartBankWeb.ErrorViewTest do
-  use SmartBan
+  use SmartBankWeb.ConnCase, async: true
+
+  # Br
