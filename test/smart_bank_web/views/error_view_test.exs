@@ -1,4 +1,4 @@
 defmodule SmartBankWeb.ErrorViewTest do
   use SmartBankWeb.ConnCase, async: true
 
-  # Br
+  # Bring render/3 and render_to_stri
