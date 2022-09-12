@@ -5,4 +5,5 @@ defmodule SmartBankWeb.ErrorViewTest do
   import Phoenix.View
 
   test "renders 404.json" do
-    assert render(SmartBankWeb.ErrorView, "404.json",
+    assert render(SmartBankWeb.ErrorView, "404.json", error: "Not Found") == %{
+          
