@@ -9,4 +9,4 @@ defmodule SmartBankWeb.ErrorViewTest do
              errors: %{detail: "Not Found"}
            }
 
-    assert render(
+    assert render(SmartBankWeb.ErrorView, "4
