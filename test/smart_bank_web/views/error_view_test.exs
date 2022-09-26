@@ -12,4 +12,5 @@ defmodule SmartBankWeb.ErrorViewTest do
     assert render(SmartBankWeb.ErrorView, "404.json", []) == %{errors: %{detail: "Route not found"}}
   end
 
-  tes
+  test "renders 500.json" do
+    a
