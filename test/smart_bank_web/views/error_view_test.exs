@@ -13,4 +13,5 @@ defmodule SmartBankWeb.ErrorViewTest do
   end
 
   test "renders 500.json" do
-    assert render(SmartBankWeb.ErrorView, "500.json", error: "Internal Server 
+    assert render(SmartBankWeb.ErrorView, "500.json", error: "Internal Server Error") ==
+             %{errors: %{
