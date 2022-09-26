@@ -13,4 +13,4 @@ defmodule SmartBankWeb.ErrorViewTest do
   end
 
   test "renders 500.json" do
-    a
+    assert render(SmartBankWeb.ErrorView,
