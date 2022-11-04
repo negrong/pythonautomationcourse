@@ -3,4 +3,5 @@ defmodule SmartBankWeb.ChannelCase do
   This module defines the test case to be used by
   channel tests.
 
-  Such tests rely on `Phoen
+  Such tests rely on `Phoenix.ChannelTest` and also
+  impor
