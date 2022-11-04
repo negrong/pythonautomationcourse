@@ -4,4 +4,4 @@ defmodule SmartBankWeb.ChannelCase do
   channel tests.
 
   Such tests rely on `Phoenix.ChannelTest` and also
-  impor
+  import other functionality to 
