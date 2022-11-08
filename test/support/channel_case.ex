@@ -5,4 +5,6 @@ defmodule SmartBankWeb.ChannelCase do
 
   Such tests rely on `Phoenix.ChannelTest` and also
   import other functionality to make it easier
-  to build common data structures and query the d
+  to build common data structures and query the data layer.
+
+  Finally, if the 
