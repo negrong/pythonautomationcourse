@@ -13,4 +13,5 @@ defmodule SmartBankWeb.ChannelCase do
   of the test unless the test case is marked as async.
   """
 
-  use ExUn
+  use ExUnit.CaseTemplate
+  alias Ecto.Adap
