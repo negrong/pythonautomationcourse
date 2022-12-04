@@ -14,4 +14,7 @@ defmodule SmartBankWeb.ChannelCase do
   """
 
   use ExUnit.CaseTemplate
-  alias Ecto.Adap
+  alias Ecto.Adapters.SQL.Sandbox
+
+  using do
+  
