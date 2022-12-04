@@ -17,4 +17,5 @@ defmodule SmartBankWeb.ChannelCase do
   alias Ecto.Adapters.SQL.Sandbox
 
   using do
-  
+    quote do
+      # Import con
