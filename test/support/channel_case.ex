@@ -18,4 +18,4 @@ defmodule SmartBankWeb.ChannelCase do
 
   using do
     quote do
-      # Import con
+      # Import conveniences for testing with channe
