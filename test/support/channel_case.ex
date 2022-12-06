@@ -18,4 +18,7 @@ defmodule SmartBankWeb.ChannelCase do
 
   using do
     quote do
-      # Import conveniences for testing with channe
+      # Import conveniences for testing with channels
+      use Phoenix.ChannelTest
+
+  
