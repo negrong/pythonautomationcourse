@@ -21,4 +21,4 @@ defmodule SmartBankWeb.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-  
+      # The default endpoint 
