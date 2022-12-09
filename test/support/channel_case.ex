@@ -22,4 +22,6 @@ defmodule SmartBankWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint Smart
+      @endpoint SmartBankWeb.Endpoint
+    end
+  end
