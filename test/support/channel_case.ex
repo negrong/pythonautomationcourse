@@ -25,3 +25,6 @@ defmodule SmartBankWeb.ChannelCase do
       @endpoint SmartBankWeb.Endpoint
     end
   end
+
+  setup tags do
+    :o
