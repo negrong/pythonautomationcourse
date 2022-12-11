@@ -27,4 +27,4 @@ defmodule SmartBankWeb.ChannelCase do
   end
 
   setup tags do
-    :o
+    :ok = Sandbox.checkout(SmartBank.Repo
