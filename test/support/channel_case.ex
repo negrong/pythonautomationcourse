@@ -33,4 +33,6 @@ defmodule SmartBankWeb.ChannelCase do
       Sandbox.mode(SmartBank.Repo, {:shared, self()})
     end
 
-  
+    :ok
+  end
+end
