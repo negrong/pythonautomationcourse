@@ -1,1 +1,3 @@
-defmodule SmartBa
+defmodule SmartBankWeb.ConnCase do
+  @moduledoc """
+  
