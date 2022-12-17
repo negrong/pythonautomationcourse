@@ -5,4 +5,6 @@ defmodule SmartBankWeb.ConnCase do
 
   Such tests rely on `Phoenix.ConnTest` and also
   import other functionality to make it easier
-  to build common data structures and query the
+  to build common data structures and query the data layer.
+
+  Finally, if the 
