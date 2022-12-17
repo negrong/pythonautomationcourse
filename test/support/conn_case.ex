@@ -3,4 +3,4 @@ defmodule SmartBankWeb.ConnCase do
   This module defines the test case to be used by
   tests that require setting up a connection.
 
-  Such te
+  Such tests rely on `Phoenix.ConnTest` and als
