@@ -4,4 +4,5 @@ defmodule SmartBankWeb.ConnCase do
   tests that require setting up a connection.
 
   Such tests rely on `Phoenix.ConnTest` and also
-  import other functionality t
+  import other functionality to make it easier
+  to build com
