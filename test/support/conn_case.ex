@@ -8,4 +8,5 @@ defmodule SmartBankWeb.ConnCase do
   to build common data structures and query the data layer.
 
   Finally, if the test case interacts with the database,
-  it cannot be async. For this reas
+  it cannot be async. For this reason, every test runs
+  inside a 
