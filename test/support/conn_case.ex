@@ -18,4 +18,6 @@ defmodule SmartBankWeb.ConnCase do
 
   using do
     quote do
-      # Import conveniences for testing with connectio
+      # Import conveniences for testing with connections
+      use Phoenix.ConnTest
+   
