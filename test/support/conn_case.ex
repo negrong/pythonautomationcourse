@@ -18,4 +18,4 @@ defmodule SmartBankWeb.ConnCase do
 
   using do
     quote do
-      # Import c
+      # Import conveniences for testing with connectio
