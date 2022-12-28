@@ -24,3 +24,7 @@ defmodule SmartBankWeb.ConnCase do
 
       # The default endpoint for testing
       @endpoint SmartBankWeb.Endpoint
+    end
+  end
+
+  setup tags do
