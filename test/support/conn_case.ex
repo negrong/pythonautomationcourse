@@ -28,4 +28,7 @@ defmodule SmartBankWeb.ConnCase do
   end
 
   setup tags do
-    :ok = Sandbox.checkout(SmartBank.Repo
+    :ok = Sandbox.checkout(SmartBank.Repo)
+
+    unless tags[:async] do
+  
