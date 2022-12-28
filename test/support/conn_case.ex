@@ -28,3 +28,4 @@ defmodule SmartBankWeb.ConnCase do
   end
 
   setup tags do
+    :ok = Sandbox.checkout(SmartBank.Repo
