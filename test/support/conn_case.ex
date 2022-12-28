@@ -22,4 +22,5 @@ defmodule SmartBankWeb.ConnCase do
       use Phoenix.ConnTest
       alias SmartBankWeb.Router.Helpers, as: Routes
 
-      # The default endpoint for
+      # The default endpoint for testing
+      @endpoint SmartBankWeb.Endpoint
