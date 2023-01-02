@@ -31,4 +31,7 @@ defmodule SmartBankWeb.ConnCase do
     :ok = Sandbox.checkout(SmartBank.Repo)
 
     unless tags[:async] do
-      Sandbox.mode(SmartBank.Repo, {:
+      Sandbox.mode(SmartBank.Repo, {:shared, self()})
+    end
+
+   
