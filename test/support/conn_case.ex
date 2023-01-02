@@ -34,4 +34,4 @@ defmodule SmartBankWeb.ConnCase do
       Sandbox.mode(SmartBank.Repo, {:shared, self()})
     end
 
-   
+    {:ok, conn: Phoenix.ConnTest.build_con
