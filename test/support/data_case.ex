@@ -1,1 +1,3 @@
-defmodule SmartBank.Da
+defmodule SmartBank.DataCase do
+  @moduledoc """
+  This 
