@@ -6,4 +6,4 @@ defmodule SmartBank.DataCase do
   You may define functions here to be used as helpers in
   your tests.
 
-  Final
+  Finally, if the test case interacts with t
