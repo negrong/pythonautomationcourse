@@ -7,4 +7,4 @@ defmodule SmartBank.DataCase do
   your tests.
 
   Finally, if the test case interacts with the database,
-  it cannot 
+  it cannot be async. For this reason, every test runs
