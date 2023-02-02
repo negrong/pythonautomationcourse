@@ -23,4 +23,9 @@ defmodule SmartBank.DataCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import SmartBank.DataCas
+      import SmartBank.DataCase
+    end
+  end
+
+  setup tags do
+    :o
