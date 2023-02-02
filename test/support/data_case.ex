@@ -21,4 +21,6 @@ defmodule SmartBank.DataCase do
       alias SmartBank.Repo
 
       import Ecto
-      import Ecto.Ch
+      import Ecto.Changeset
+      import Ecto.Query
+   
