@@ -28,4 +28,4 @@ defmodule SmartBank.DataCase do
   end
 
   setup tags do
-    :o
+    :ok = Sandbox.checkout(SmartBank.Repo)
