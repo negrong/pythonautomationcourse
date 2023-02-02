@@ -15,3 +15,6 @@ defmodule SmartBank.DataCase do
   use ExUnit.CaseTemplate
 
   alias Ecto.Adapters.SQL.Sandbox
+
+  using do
+    quote 
