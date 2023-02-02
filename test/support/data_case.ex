@@ -17,4 +17,7 @@ defmodule SmartBank.DataCase do
   alias Ecto.Adapters.SQL.Sandbox
 
   using do
-    quote 
+    quote do
+      alias SmartBank.Repo
+
+      i
