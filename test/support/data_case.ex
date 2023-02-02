@@ -20,4 +20,5 @@ defmodule SmartBank.DataCase do
     quote do
       alias SmartBank.Repo
 
-      i
+      import Ecto
+      import Ecto.Ch
