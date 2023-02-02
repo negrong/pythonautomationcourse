@@ -29,3 +29,6 @@ defmodule SmartBank.DataCase do
 
   setup tags do
     :ok = Sandbox.checkout(SmartBank.Repo)
+
+    unless tags[:async] do
+      Sa
