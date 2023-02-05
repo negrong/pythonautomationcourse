@@ -31,4 +31,4 @@ defmodule SmartBank.DataCase do
     :ok = Sandbox.checkout(SmartBank.Repo)
 
     unless tags[:async] do
-      Sa
+      Sandbox.mode(SmartBank.Repo
