@@ -34,4 +34,8 @@ defmodule SmartBank.DataCase do
       Sandbox.mode(SmartBank.Repo, {:shared, self()})
     end
 
-    :
+    :ok
+  end
+
+  @doc """
+  A helper that tr
