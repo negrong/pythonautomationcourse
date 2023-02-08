@@ -38,4 +38,4 @@ defmodule SmartBank.DataCase do
   end
 
   @doc """
-  A helper that tr
+  A helper that transforms changeset errors into
