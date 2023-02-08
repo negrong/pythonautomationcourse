@@ -40,4 +40,4 @@ defmodule SmartBank.DataCase do
   @doc """
   A helper that transforms changeset errors into a map of messages.
 
-      assert {:e
+      assert {:error, changeset} = Accounts.create_user
