@@ -38,4 +38,6 @@ defmodule SmartBank.DataCase do
   end
 
   @doc """
-  A helper that transforms changeset errors into
+  A helper that transforms changeset errors into a map of messages.
+
+      assert {:e
