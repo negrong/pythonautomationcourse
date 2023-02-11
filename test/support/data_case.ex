@@ -45,4 +45,5 @@ defmodule SmartBank.DataCase do
       assert %{password: ["password is too short"]} = errors_on(changeset)
 
   """
-  def errors_on(
+  def errors_on(changeset) do
+    Ecto.Change
