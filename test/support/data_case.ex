@@ -42,4 +42,4 @@ defmodule SmartBank.DataCase do
 
       assert {:error, changeset} = Accounts.create_user(%{password: "short"})
       assert "password is too short" in errors_on(changeset).password
-      a
+      assert %{password: ["password is too s
