@@ -46,4 +46,5 @@ defmodule SmartBank.DataCase do
 
   """
   def errors_on(changeset) do
-    Ecto.Changeset.traverse_errors(change
+    Ecto.Changeset.traverse_errors(changeset, fn {message, opts} ->
+      
