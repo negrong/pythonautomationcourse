@@ -52,4 +52,4 @@ defmodule SmartBank.DataCase do
       end)
     end)
   end
-en
+end
