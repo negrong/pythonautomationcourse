@@ -74,3 +74,33 @@ defmodule SmartBank.Factory do
   end
 
   @doc """
+  Builds an entity with fake data and persists it to database.
+
+  Refer to `build/1` for optional arguments.
+
+  Returns a struct.
+  """
+  def insert(factory), do: insert(factory, %{}, [])
+  def insert(factory, context: %{} = context), do: insert(factory, context, [])
+  def insert(factory, attributes), do: insert(factory, %{}, attributes)
+
+  def insert(factory, context, attributes) when is_atom(factory) and is_map(context) do
+    Repo.insert!(build(factory, context, attributes))
+  end
+
+  @doc """
+  Same as `build/1`, except it generates raw maps of attributes, even for nested structs.
+
+  This allows generation of attribute maps to test domain calls. (structs cannot be passed to
+  changesets)
+
+  Returns a map.
+  """
+  def attrs(factory), do: attrs(factory, %{}, [])
+  @spec attrs(:account | :transaction, maybe_improper_list) :: map
+  def attrs(factory, context: %{} = context), do: attrs(factory, context, [])
+  def attrs(factory, attributes) when is_list(attributes), do: attrs(factory, %{}, attributes)
+  @spec attrs(:account | :transaction, map, any) :: map
+  def attrs(factory, context, attributes) when is_atom(factory) and is_map(context) do
+    factory |> build(context) |> recursive_struct_to_map() |> Map.merge(Map.new(attributes))
+  end
