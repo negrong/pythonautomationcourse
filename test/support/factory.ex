@@ -104,3 +104,40 @@ defmodule SmartBank.Factory do
   def attrs(factory, context, attributes) when is_atom(factory) and is_map(context) do
     factory |> build(context) |> recursive_struct_to_map() |> Map.merge(Map.new(attributes))
   end
+
+  @doc """
+  Builds an empty context map
+
+  Returns a map.
+  """
+  def new_context, do: %{}
+
+  @doc """
+  Updates a context map by constructing an entity specified by factory. It is stored as a
+  key-value pair where the key is the same atom as `factory` and the value is the struct
+  itself.
+
+  Attributes can also be overridden just like in `build/1`.
+
+  Returns a map.
+  """
+  def compose(context, factory, attributes \\ []) when is_atom(factory) do
+    context |> Map.put(factory, insert(factory, context, attributes))
+  end
+
+  #
+  # Gets the corresponding entity in context from the atom received or build it up in
+  # case its not there, from the factory specification
+  #
+  defp get_assoc(context, entity_atom_or_list, attributes \\ []) when is_map(context) do
+    entity_list = List.wrap(entity_atom_or_list)
+
+    case Enum.find_value(entity_list, nil, fn entity_atom -> context[entity_atom] end) do
+      nil -> entity_list |> List.first() |> build(context, attributes)
+      entity -> entity
+    end
+  end
+
+  #
+  # Entities build nested sub-entities by default.
+  # However, the developer may override some of these sub-entities by setting
