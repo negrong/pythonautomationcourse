@@ -141,3 +141,28 @@ defmodule SmartBank.Factory do
   #
   # Entities build nested sub-entities by default.
   # However, the developer may override some of these sub-entities by setting
+  # an association via foreign key. This function discards the pre-generated
+  # entities in case an override is set.
+  #
+  # e.g.: Drop a generated 'patient' if an explicit 'patient_id' was passed
+  #
+  defp filter_overridden(entity, attributes) do
+    to_drop =
+      Enum.reduce(attributes, [], fn {identifier, _value}, acc ->
+        string_identifier = "#{identifier}"
+
+        with true <- String.ends_with?(string_identifier, "_id"),
+             raw <-
+               string_identifier
+               |> String.replace_suffix("_id", "")
+               |> String.to_atom(),
+             true <- Map.has_key?(entity, raw) do
+          [raw | acc]
+        else
+          _ -> acc
+        end
+      end)
+
+    Map.drop(entity, to_drop)
+  end
+end
