@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandb
+Ecto.Adapters.SQL.Sandbox.mode(SmartBank.Repo, :manual)
